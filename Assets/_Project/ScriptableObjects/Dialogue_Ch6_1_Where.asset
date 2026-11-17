@@ -1,0 +1,386 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch6_1_Where
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: fluent
+  nodes:
+  - nodeId: fluent
+    lines: []
+    teachVocabularyWords:
+    - sixty-two
+    - kooba
+    - my
+    - knees
+    - are
+    - older
+    - than
+    - this
+    - country's
+    - debt
+    - will
+    - you
+    - take
+    - the
+    - kitchen
+    - properly
+    - your
+    - name
+    - on
+    - door
+    - two
+    - names
+    - grand
+    - mine
+    - first
+    - though
+    - for
+    - now
+    - a
+    - year
+    - you're
+    - only
+    - man
+    - in
+    - country
+    - asking
+    - more
+    - time
+    - instead
+    - of
+    - money
+    - it's
+    - forty
+    - degrees
+    - and
+    - i'd
+    - give
+    - week's
+    - wages
+    - one
+    - day
+    - dublin
+    - rain
+    - is
+    - that
+    - mad
+    - countries
+    - jaysus
+    - richer
+    - me
+    - so
+    - christmas
+    - declan
+    - would
+    - cry
+    - then
+    - he'd
+    - put
+    - us
+    - to
+    - work
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: wh
+  - nodeId: wh
+    lines: []
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch5_stays
+    branchNodeId: wh_dublin
+    nextNodeId: wh_away
+  - nodeId: wh_away
+    lines: []
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch5_goes_to_perth
+    branchNodeId: wh_perth
+    nextNodeId: wh_poland
+  - nodeId: wh_dublin
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "29 listopada 2010. Wczoraj Irlandia przyj\u0119\u0142a pomoc Unii Europejskiej i Mi\u0119dzynarodowego Funduszu Walutowego: osiemdziesi\u0105t pi\u0119\u0107 miliard\xF3w euro. W radiu co drugie s\u0142owo to \"bailout\"."
+    - speakerId: narrator
+      language: 0
+      text: "Restauracja Declana przetrwa\u0142a. Kr\xF3tsze menu, ta\u0144sze wino, ten sam zlew. Kuba prowadzi kuchni\u0119 od otwarcia do zamkni\u0119cia."
+    - speakerId: declan
+      language: 1
+      text: Sixty-two, Kooba. My knees are older than this country's debt. Will you take the kitchen? Properly. Your name on the door.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Moje nazwisko na drzwiach. \"Kooba\", przez dwa \"o\", jak na pierwszej kopercie z wyp\u0142at\u0105."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Bior\u0119. Z twoim nazwiskiem obok."
+      targetNodeId: wh_take
+      requiredFlag: 
+    - choiceText: Jeszcze nie. Daj mi rok.
+      targetNodeId: wh_year
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: wh_take
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Two names on the door. Grand. Mine first, though. For now.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Ka\u017Cdy kiedy\u015B od tego zaczyna\u0142. Ja zacz\u0105\u0142em od dwudziestu euro i zlewu."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch6_name_on_the_door
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 10
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: wh_year
+    lines:
+    - speakerId: declan
+      language: 1
+      text: A year. You're the only man in this country asking for more time instead of more money.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Czas to jedyna rzecz, kt\xF3rej banki jeszcze nie zagwarantowa\u0142y."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch6_asked_for_a_year
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: wh_perth
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "29 listopada 2010. Pilbara, Australia Zachodnia. Ob\xF3z g\xF3rniczy na czterysta os\xF3b, czterdzie\u015Bci stopni w cieniu, kt\xF3rego nie ma."
+    - speakerId: narrator
+      language: 0
+      text: "Kuba i Gavin prowadz\u0105 kuchni\u0119: trzy zmiany, tysi\u0105c dwie\u015Bcie posi\u0142k\xF3w dziennie, pensja, o jakiej w Dublinie nikomu si\u0119 nie \u015Bni\u0142o."
+    - speakerId: gavin
+      language: 1
+      text: Kooba. It's forty degrees and I'd give a week's wages for one day of Dublin rain. Is that mad?
+    - speakerId: kuba_thought
+      language: 0
+      text: "Gavin t\u0119skni za deszczem. Ja t\u0119skni\u0119... nie wiem ju\u017C, za kt\xF3rym miejscem. Chyba za kuchni\u0105, w kt\xF3rej wszyscy znali moje imi\u0119."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "M\xF3wi\u0119 mu, \u017Ce to normalne. Ja t\u0119skni\u0119 za dwoma krajami naraz."
+      targetNodeId: wh_two
+      requiredFlag: 
+    - choiceText: "Proponuj\u0119, \u017Ceby\u015Bmy na \u015Bwi\u0119ta polecieli do Dublina."
+      targetNodeId: wh_christmas
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: wh_two
+    lines:
+    - speakerId: gavin
+      language: 1
+      text: Two countries. Jaysus. You're richer than me, so.
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch6_two_homes
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -5
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: wh_christmas
+    lines:
+    - speakerId: gavin
+      language: 1
+      text: Dublin for Christmas... Declan would cry. Then he'd put us to work.
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch6_christmas_in_dublin
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: wh_poland
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "29 listopada 2010. Krak\xF3w. Na Rynku rozstawiaj\u0105 jarmark bo\u017Conarodzeniowy, a w hotelowej kuchni przy Rynku od sz\xF3stej rano pachnie barszczem i roso\u0142em."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch5_krakow_job
+    branchNodeId: wh_sous
+    nextNodeId: wh_climbed
+  - nodeId: wh_sous
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Kuba jest tu zast\u0119pc\u0105 szefa kuchni od dw\xF3ch lat. Certyfikat z Cathal Brugha Street wisi w biurze szefa, obok menu na Euro 2012."
+    - speakerId: kuba_thought
+      language: 0
+      text: "W Dublinie by\u0142em \"Kooba\". Tu jestem \"panem Jakubem\". Nie wiem, kt\xF3ry z nich lepiej kroi cebul\u0119."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: wh_mum
+  - nodeId: wh_climbed
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Kuba zaczyna\u0142 tu od zlewu, jak w Dublinie. Po roku dosta\u0142 desk\u0119, po drugim ca\u0142\u0105 zmian\u0119. Szef kuchni m\xF3wi na niego \"Irlandczyk\"."
+    - speakerId: kuba_thought
+      language: 0
+      text: "W Dublinie by\u0142em Polakiem. W Krakowie jestem Irlandczykiem. Wsz\u0119dzie troch\u0119 st\u0105d i troch\u0119 z daleka."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: wh_mum
+  - nodeId: wh_mum
+    lines:
+    - speakerId: mum
+      language: 0
+      text: "Kubu\u015B, przyjedziesz na Wigili\u0119? Tata ju\u017C kupi\u0142 karpia. \u017Bywego. P\u0142ywa w wannie i ma na imi\u0119 Declan."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Przyje\u017Cd\u017Cam. I zrobi\u0119 pierogi jak w Dublinie."
+      targetNodeId: wh_wigilia
+      requiredFlag: 
+    - choiceText: "Mamo, w Wigili\u0119 hotel jest pe\u0142ny. Przyjad\u0119 w drugi dzie\u0144 \u015Bwi\u0105t."
+      targetNodeId: wh_later
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: wh_wigilia
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Karp o imieniu Declan. Tata ma poczucie humoru, kt\xF3rego nikt w rodzinie nie podejrzewa\u0142."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch6_christmas_eve_home
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -10
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: wh_later
+    lines:
+    - speakerId: mum
+      language: 0
+      text: No trudno. Karp poczeka. Declan jest cierpliwy.
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

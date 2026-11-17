@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch2_3_Brunch
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: brunch_1
+  nodes:
+  - nodeId: brunch_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Niedziela, jedenasta. Sto dwadzie\u015Bcia porcji \"full Irish\": jajka, bekon, kie\u0142baski, black pudding, fasolka. Talerze wracaj\u0105 szybciej, ni\u017C Kuba je myje."
+    - speakerId: declan
+      language: 1
+      text: Plates, Kooba! I need plates, not philosophy!
+    - speakerId: kuba_thought
+      language: 0
+      text: "Sk\u0105d wie o filozofii? Marek. Oczywi\u015Bcie, \u017Ce Marek."
+    teachVocabularyWords:
+    - need
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch2_good_shoes
+    branchNodeId: brunch_steady
+    nextNodeId: brunch_slip
+  - nodeId: brunch_steady
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "W nowych butach stoj\u0119 na mokrej pod\u0142odze jak przyspawany. Jedyna stabilna rzecz w tej kuchni to ja. Czterdzie\u015Bci euro dobrze wydane."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 5
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: brunch_crash
+  - nodeId: brunch_slip
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Trampki jad\u0105 po mokrych kafelkach jak po lodzie. Dwa razy prawie l\u0105duj\u0119 w zlewie razem z talerzami."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: -5
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: brunch_crash
+  - nodeId: brunch_crash
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Nowy pomocnik, ch\u0142opak z Lagos, pierwszy dzie\u0144, niesie za wysoki stos. Talerze lec\u0105 na posadzk\u0119. Ca\u0142a kuchnia zamiera."
+    - speakerId: declan
+      language: 1
+      text: Who did that?! Who?!
+    - speakerId: kuba_thought
+      language: 0
+      text: "Ch\u0142opak jest bia\u0142y jak talerz. Patrzy na mnie. Ja patrz\u0119 na skorupy."
+    teachVocabularyWords:
+    - who
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Bior\u0119 to na siebie."
+      targetNodeId: brunch_cover
+      requiredFlag: 
+    - choiceText: "Milcz\u0119 i zbieram skorupy."
+      targetNodeId: brunch_quiet
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: brunch_cover
+    lines:
+    - speakerId: declan
+      language: 1
+      text: You? Hm. Then sweep it up and move. We'll talk later.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Ch\u0142opak z Lagos ma na imi\u0119 Tunde. Po zmianie przynosi mi kubek herbaty z trzema \u0142y\u017Ceczkami cukru. Po irlandzku znaczy to \"dzi\u0119kuj\u0119\". Po nigeryjsku chyba te\u017C."
+    teachVocabularyWords:
+    - sweep
+    - move
+    - talk
+    - later
+    unlockSlangIds: []
+    setFlags:
+    - ch2_covered_tunde
+    outcome:
+      moneyEuros: 0
+      energy: -5
+      homesickness: 0
+      integration: 10
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: brunch_end
+  - nodeId: brunch_quiet
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Nobody? Grand. Then everybody stays late tonight.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Zostajemy wszyscy do pierwszej. Tunde zmywa ze mn\u0105 w milczeniu. My\u015Bl\u0119 o Camusie: \"D\u017Cuma\", ludzie, kt\xF3rzy robi\u0105, co trzeba. Ja nie zrobi\u0142em nic. To te\u017C jest wyb\xF3r."
+    teachVocabularyWords:
+    - everybody
+    - stays
+    - late
+    - tonight
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: -15
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: brunch_end
+  - nodeId: brunch_end
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Sto dwadzie\u015Bcia porcji. Ka\u017Cdy talerz przeszed\u0142 przez moje r\u0119ce. Gdyby za to dawali punkty, by\u0142bym w czo\u0142\xF3wce ligi."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

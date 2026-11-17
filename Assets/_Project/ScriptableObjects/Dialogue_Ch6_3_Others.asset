@@ -1,0 +1,213 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch6_3_Others
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: fluent
+  nodes:
+  - nodeId: fluent
+    lines: []
+    teachVocabularyWords:
+    - same
+    - plates
+    - kooba
+    - bigger
+    - numbers
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: ot_1
+  - nodeId: ot_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "\u015Aroda. Wie\u015Bci przychodz\u0105 jak zawsze: telefonem, mailem, przez znajomych znajomych."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch5_lent_marek
+    branchNodeId: ot_marek_pays
+    nextNodeId: ot_marek
+  - nodeId: ot_marek_pays
+    lines:
+    - speakerId: marek
+      language: 0
+      text: "Kuba, oddaj\u0119 te pi\u0119\u0107dziesi\u0105t euro z dwa tysi\u0105ce \xF3smego. Z odsetkami w postaci przeprosin. Je\u017Cd\u017C\u0119 taks\xF3wk\u0105 po Dublinie. Na apartament za ma\u0142o, na \u017Cycie wystarczy. Bez \"notions\"."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch6_marek_paid_back
+    outcome:
+      moneyEuros: 50
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: ot_tunde
+  - nodeId: ot_marek
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Marek je\u017Adzi taks\xF3wk\u0105 po Dublinie i opowiada pasa\u017Cerom, \u017Ce by\u0142 kiedy\u015B deweloperem. Nikt mu nie wierzy, a on si\u0119 z tego \u015Bmieje."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: ot_tunde
+  - nodeId: ot_tunde
+    lines: []
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch3_tunde_friend
+    branchNodeId: ot_tunde_numbers
+    nextNodeId: ot_bartek
+  - nodeId: ot_tunde_numbers
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Tunde sko\u0144czy\u0142 ksi\u0119gowo\u015B\u0107. Pracuje w firmie, kt\xF3ra liczy dla rz\u0105du, ile Irlandia jest winna. M\xF3wi, \u017Ce to jak zmywanie: nigdy si\u0119 nie ko\u0144czy, ale kto\u015B musi to robi\u0107."
+    - speakerId: tunde
+      language: 1
+      text: Same plates, Kooba. Bigger numbers.
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: ot_bartek
+  - nodeId: ot_bartek
+    lines: []
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch5_kept_bartek
+    branchNodeId: ot_bartek_cooks
+    nextNodeId: ot_end
+  - nodeId: ot_bartek_cooks
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Bartek gotuje na zmianie, kt\xF3r\u0105 kiedy\u015B prowadzi\u0142 Kuba. Ma w\u0142asne niebieskie plastry i w\u0142asnego nowego ch\u0142opaka przy zlewie."
+    - speakerId: bartek
+      language: 0
+      text: "Panie Kuba... to znaczy, Kuba. Dzi\u0119kuj\u0119. Za tamten czwartek."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: ot_end
+  - nodeId: ot_end
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Ka\u017Cdy z nas wyl\u0105dowa\u0142 gdzie indziej. Ale wszyscy zaczynali\u015Bmy przy tym samym zlewie, z tym samym strachem i tymi samymi niebieskimi plastrami."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Zak\u0142adam grup\u0119 na Facebooku: \"Zlew u Declana, 2004\"."
+      targetNodeId: ot_group
+      requiredFlag: 
+    - choiceText: "Przepisuj\u0119 wszystkie numery do nowego telefonu, \u017Ceby \u017Caden nie zgin\u0105\u0142."
+      targetNodeId: ot_numbers
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: ot_group
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Pierwszy do\u0142\u0105cza Marek. Drugi Tomek, z Wroc\u0142awia. Trzeci, po godzinie, Gavin, z komentarzem: \"Notions.\""
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch6_sink_group
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: ot_numbers
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Marek, Tomek, Agnieszka, Darius, Siobh\xE1n, Tunde, Declan. Siedem numer\xF3w. Siedem lat. Prawie."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

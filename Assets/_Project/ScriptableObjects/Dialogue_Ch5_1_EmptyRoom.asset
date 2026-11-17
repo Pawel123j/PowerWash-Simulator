@@ -1,0 +1,202 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch5_1_EmptyRoom
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: fluent
+  nodes:
+  - nodeId: fluent
+    lines: []
+    teachVocabularyWords:
+    - glass
+    - walls
+    - kooba
+    - the
+    - whole
+    - city
+    - can
+    - see
+    - there's
+    - nobody
+    - inside
+    - bank
+    - rang
+    - we
+    - close
+    - on
+    - friday
+    - half
+    - my
+    - lads
+    - will
+    - be
+    - dole
+    - by
+    - christmas
+    - it's
+    - fierce
+    - quiet
+    - remember
+    - what
+    - i
+    - told
+    - you
+    - nothing
+    - in
+    - this
+    - country
+    - lasts
+    - hate
+    - being
+    - right
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: er_1
+  - nodeId: er_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "29 wrze\u015Bnia 2008. Dwa tygodnie temu w Ameryce upad\u0142 bank, kt\xF3rego nazwy nikt w kuchni nie umia\u0142 wym\xF3wi\u0107. Dzi\u015B radio m\xF3wi ju\u017C tylko o irlandzkich bankach i o tym, jak lec\u0105 ich akcje."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch4_with_gavin
+    branchNodeId: er_glass
+    nextNodeId: er_old
+  - nodeId: er_glass
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Szklana restauracja nad Liffey, poniedzia\u0142ek, \xF3sma wieczorem. Dwa stoliki zaj\u0119te. Deweloper w r\xF3\u017Cowej koszuli nie zap\u0142aci\u0142 rachunku z sierpnia: trzy tysi\u0105ce euro."
+    - speakerId: gavin
+      language: 1
+      text: Glass walls, Kooba. The whole city can see there's nobody inside. The bank rang. We close on Friday. Half my lads will be on the dole by Christmas.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Szklane \u015Bciany. My\u015Bla\u0142em, \u017Ce s\u0105 dla widowni. Teraz widownia patrzy na pust\u0105 sal\u0119."
+    teachVocabularyWords:
+    - glass
+    - nobody
+    - inside
+    - close
+    - friday
+    - christmas
+    unlockSlangIds:
+    - slang_dole
+    setFlags:
+    - ch5_glass_closed
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: er_end
+  - nodeId: er_old
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Stara restauracja Declana, poniedzia\u0142ek, \xF3sma wieczorem. P\xF3\u0142 sali pustej. Szklana, nad Liffey, stoi zamkni\u0119ta od tygodnia, z kartk\u0105 od banku na drzwiach."
+    - speakerId: declan
+      language: 1
+      text: It's fierce quiet. Remember what I told you? Nothing in this country lasts. I hate being right, Kooba.
+    teachVocabularyWords:
+    - quiet
+    - remember
+    - hate
+    - right
+    unlockSlangIds:
+    - slang_fierce
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: er_end
+  - nodeId: er_end
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "W kuchni cicho. Nawet zmywarka szumi jakby ciszej, \u017Ceby nie zwraca\u0107 na siebie uwagi."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Zostaj\u0119 po zamkni\u0119ciu i myj\u0119 wszystko jeszcze raz, za darmo."
+      targetNodeId: er_stay
+      requiredFlag: 
+    - choiceText: "Id\u0119 do domu wcze\u015Bniej. Nie ma co robi\u0107."
+      targetNodeId: er_home
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: er_stay
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Myj\u0119 czyste talerze. G\u0142upie? Mo\u017Ce. Ale dop\xF3ki co\u015B myj\u0119, ta kuchnia jeszcze dzia\u0142a."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch5_stayed_late
+    outcome:
+      moneyEuros: 0
+      energy: -10
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: er_home
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Pierwszy raz od czterech lat wychodz\u0119 przed p\xF3\u0142noc\u0105. Dublin o dziesi\u0105tej wieczorem wygl\u0105da jak miasto, w kt\xF3rym kto\u015B wy\u0142\u0105czy\u0142 muzyk\u0119."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 5
+      homesickness: 5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

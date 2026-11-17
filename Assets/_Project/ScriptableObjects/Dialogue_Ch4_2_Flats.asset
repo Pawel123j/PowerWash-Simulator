@@ -1,0 +1,200 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch4_2_Flats
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: fluent
+  nodes:
+  - nodeId: fluent
+    lines: []
+    teachVocabularyWords:
+    - property
+    - ah
+    - marek
+    - has
+    - notions
+    - everyone
+    - in
+    - this
+    - country
+    - these
+    - days
+    - good
+    - man
+    - my
+    - da
+    - bought
+    - land
+    - seventy-nine
+    - lost
+    - it
+    - eighty-three
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: fl_1
+  - nodeId: fl_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Wtorek wiecz\xF3r. Marek przychodzi do pubu z teczk\u0105 kolorowych folder\xF3w: \"Riverside Gardens, Navan. Apartamenty od 285 000 euro\"."
+    - speakerId: marek
+      language: 0
+      text: "Kuba, s\u0142uchaj. Banki daj\u0105 sto procent kredytu. Nawet nam. Rezerwacja to pi\u0119\u0107dziesi\u0105t euro, reszt\u0119 kredyt. Za dwa lata to b\u0119dzie warte czterysta tysi\u0119cy. Ceny tylko rosn\u0105, to jest Irlandia!"
+    - speakerId: declan
+      language: 1
+      text: Property? Ah, Marek has notions. Everyone in this country has notions these days.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Dwie\u015Bcie osiemdziesi\u0105t pi\u0119\u0107 tysi\u0119cy. W z\u0142ot\xF3wkach nie umiem nawet tego przeczyta\u0107. Heraklit m\xF3wi\u0142, \u017Ce wszystko p\u0142ynie. Ceny te\u017C? W kt\xF3r\u0105 stron\u0119?"
+    teachVocabularyWords:
+    - property
+    - everyone
+    - country
+    - days
+    unlockSlangIds:
+    - slang_notions
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch2_tomek_at_sink
+    branchNodeId: fl_tomek
+    nextNodeId: fl_choice
+  - nodeId: fl_tomek
+    lines:
+    - speakerId: tomek
+      language: 0
+      text: "Rzuci\u0142em zlew rok temu. Brygadzista w Navan, tysi\u0105c euro tygodniowo, pod sto\u0142em. Te mieszkania to ja stawiam, Kuba. \u015Aciany jak z papieru, ale sprzedaj\u0105 si\u0119, zanim wyschnie tynk."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Tomek m\xF3wi to z dum\u0105. I z czym\u015B jeszcze, czego nie umiem nazwa\u0107."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: fl_choice
+  - nodeId: fl_choice
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Pi\u0119\u0107dziesi\u0105t euro dzi\u015B. Trzysta tysi\u0119cy kiedy\u015B. Gdzie\u015B pomi\u0119dzy jest moje \u017Cycie."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Wp\u0142acam pi\u0119\u0107dziesi\u0105t euro rezerwacji."
+      targetNodeId: fl_book
+      requiredFlag: 
+    - choiceText: "M\xF3wi\u0119, \u017Ce musz\u0119 to przemy\u015Ble\u0107."
+      targetNodeId: fl_think
+      requiredFlag: 
+    - choiceText: "Odmawiam. Nie kupuj\u0119 czego\u015B, czego jeszcze nie ma."
+      targetNodeId: fl_no
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: fl_book
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Formularz, podpis, pi\u0119\u0107dziesi\u0105t euro w kopercie. Marek klepie Kub\u0119 po plecach tak, \u017Ce Guinness l\u0105duje na folderze."
+    - speakerId: marek
+      language: 0
+      text: "Witaj w klubie w\u0142a\u015Bcicieli! Za rok sprzedasz z zyskiem i kupisz dwa."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Jestem w\u0142a\u015Bcicielem pi\u0119\u0107dziesi\u0119ciu euro w mieszkaniu, kt\xF3rego nie ma, w mie\u015Bcie, w kt\xF3rym nigdy nie by\u0142em."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch4_booked_flat
+    outcome:
+      moneyEuros: -50
+      energy: 0
+      homesickness: -5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: fl_think
+    lines:
+    - speakerId: marek
+      language: 0
+      text: "My\u015Bl, my\u015Bl. Tylko szybko, bo do pi\u0105tku wykupi\u0105 Irlandczycy."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Kant pisa\u0142, \u017Ce o\u015Bwiecenie to wyj\u015Bcie z niedojrza\u0142o\u015Bci. Nie pisa\u0142, co zrobi\u0107 z folderem dewelopera."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch4_flat_maybe
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: fl_no
+    lines:
+    - speakerId: marek
+      language: 0
+      text: "Twoja strata, filozofie. Za pi\u0119\u0107 lat pogadamy."
+    - speakerId: declan
+      language: 1
+      text: Good man. My da bought land in seventy-nine. Lost it in eighty-three.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Declan nie wygl\u0105da na kogo\u015B, kto \u017Cartuje."
+    teachVocabularyWords:
+    - bought
+    - land
+    - lost
+    unlockSlangIds: []
+    setFlags:
+    - ch4_no_flat
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

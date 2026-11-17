@@ -1,0 +1,172 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch2_6_Knife
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: knife_1
+  nodes:
+  - nodeId: knife_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "\u015Aroda, przed otwarciem. Declan staje przy zlewie z no\u017Cem szefa kuchni w r\u0119ce i workiem cebuli pod pach\u0105."
+    - speakerId: declan
+      language: 1
+      text: Our prep cook is gone back to Cork. Can you hold a knife, Kooba?
+    - speakerId: kuba_thought
+      language: 0
+      text: "Czy umiem trzyma\u0107 n\xF3\u017C. Pi\u0119\u0107 lat filozofii i nikt mnie o to nie zapyta\u0142."
+    teachVocabularyWords:
+    - prep
+    - cook
+    - gone
+    - hold
+    - knife
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch2_covered_tunde
+    branchNodeId: knife_tunde
+    nextNodeId: knife_try
+  - nodeId: knife_tunde
+    lines:
+    - speakerId: declan
+      language: 1
+      text: And about Sunday. Tunde told me. You're sound, Kooba. That's why I'm asking you.
+    - speakerId: kuba_thought
+      language: 0
+      text: "\"Sound\". Po minie Declana poznaj\u0119, \u017Ce to komplement. Chyba najwi\u0119kszy, jaki ma na stanie."
+    teachVocabularyWords:
+    - told
+    - asking
+    unlockSlangIds:
+    - slang_sound
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: knife_try
+  - nodeId: knife_try
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Deska, cebula, n\xF3\u017C. Declan pokazuje raz: palce zgi\u0119te jak pazury, ostrze prowadzi k\u0142ykie\u0107. Dziesi\u0119\u0107 cebul p\xF3\u017Aniej Kuba p\u0142acze, ale nie ze smutku."
+    - speakerId: declan
+      language: 1
+      text: Not bad. Not good either. Two hours of prep before every shift, the sink after. Same money for now. Deal?
+    teachVocabularyWords:
+    - bad
+    - either
+    - hours
+    - every
+    - money
+    - deal
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Bior\u0119. Od zlewu do deski - to jest kariera."
+      targetNodeId: knife_yes
+      requiredFlag: 
+    - choiceText: "Prosz\u0119 o tydzie\u0144 do namys\u0142u."
+      targetNodeId: knife_wait
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: knife_yes
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Good man. Tomorrow, nine. Bring your own plasters.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Syzyf dosta\u0142 nowy kamie\u0144. Mniejszy, ostrzejszy i pachn\u0105cy cebul\u0105. Wyobra\u017Cam go sobie szcz\u0119\u015Bliwym. Tym razem dzia\u0142a."
+    teachVocabularyWords:
+    - plasters
+    unlockSlangIds: []
+    setFlags:
+    - ch2_prep_cook
+    outcome:
+      moneyEuros: 0
+      energy: -5
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: knife_end
+  - nodeId: knife_wait
+    lines:
+    - speakerId: declan
+      language: 1
+      text: A week? Fair enough. The onions will wait. I won't, so don't be long.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Nie wiem, dlaczego si\u0119 waham. Mo\u017Ce dlatego, \u017Ce przy zlewie wiem, kim jestem. A za desk\u0105 nie wiem jeszcze nic."
+    teachVocabularyWords:
+    - fair
+    - enough
+    - wait
+    - long
+    unlockSlangIds: []
+    setFlags:
+    - ch2_prep_later
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: knife_end
+  - nodeId: knife_end
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Wieczorem budka telefoniczna na rogu Phibsborough Road. Karta za pi\u0119\u0107 euro, dwana\u015Bcie minut do Polski."
+    - speakerId: mum
+      language: 0
+      text: "Kubu\u015B, chc\u0105 ci\u0119 na kucharza? M\xF3j syn, kucharz w Dublinie! Ojciec m\xF3wi, \u017Ce w rodzinie zawsze by\u0142 talent do no\u017Ca. Po dziadku rze\u017Aniku."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Drugi tydzie\u0144 w Dublinie: pierwsza koperta, pierwsze irlandzkie s\u0142owa, pierwsza cebula. Brudne talerze dalej czekaj\u0105. Ale kto\u015B zobaczy\u0142, \u017Ce umiem co\u015B wi\u0119cej."
+    - speakerId: narrator
+      language: 0
+      text: "Koniec Rozdzia\u0142u 2: Pierwsza wyp\u0142ata."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -10
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

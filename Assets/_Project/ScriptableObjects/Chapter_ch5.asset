@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a091640ec87214ebe9cf95118fbb3b, type: 3}
+  m_Name: Chapter_ch5
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Story.StoryChapter
+  chapterId: ch5
+  title: "Rozdzia\u0142 5: Krach"
+  beats:
+  - beatId: ch5_empty_room
+    day: 25
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: a1f4d856f12e4df458510f65eb2efd61, type: 2}
+    endsChapter: 0
+  - beatId: ch5_guarantee
+    day: 26
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 06b6312d2d7fa1246a065520a1444434, type: 2}
+    endsChapter: 0
+  - beatId: ch5_tomek
+    day: 27
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: c104e783045ddd641a377861702434bd, type: 2}
+    endsChapter: 0
+  - beatId: ch5_list
+    day: 28
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: afc7080ee422a6f4f9bf6f5c0e7e2f38, type: 2}
+    endsChapter: 0
+  - beatId: ch5_dad
+    day: 29
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 39fb63a1f683fdf42a50b67a852d02a8, type: 2}
+    endsChapter: 0
+  - beatId: ch5_choice
+    day: 30
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: d2cda24facc95564a8507603f411c53b, type: 2}
+    endsChapter: 1
+  startsOn: 2008-09-29
+  relocations: []

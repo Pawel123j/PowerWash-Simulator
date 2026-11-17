@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch4_3_Zloty
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: fluent
+  nodes:
+  - nodeId: fluent
+    lines: []
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: zl_1
+  - nodeId: zl_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "\u015Aroda. Telefon do domu z kom\xF3rki: karta za pi\u0119\u0107 euro to przesz\u0142o\u015B\u0107, Kuba ma abonament."
+    - speakerId: mum
+      language: 0
+      text: "Kubu\u015B, przelew doszed\u0142, dzi\u0119kujemy. Tylko jako\u015B mniej tych z\u0142ot\xF3wek ni\u017C kiedy\u015B. Ojciec m\xF3wi, \u017Ce z\u0142oty jest mocny. Ja tam nie wiem, czy mocny, ale na mniej starcza."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Dwa lata temu euro by\u0142o warte cztery pi\u0119\u0107dziesi\u0105t. Dzi\u015B nieca\u0142e cztery. Pracuj\u0119 tyle samo, a do domu dochodzi mniej. Ekonomia jest jak dubli\u0144ska pogoda: nikt jej nie wybiera, wszyscy na ni\u0105 narzekaj\u0105."
+    - speakerId: mum
+      language: 0
+      text: "A wiesz, \u017Ce u ojca w zak\u0142adzie dali podwy\u017Ck\u0119? I \u017Ce Kowalscy od s\u0105siad\xF3w wr\xF3cili z Londynu i otworzyli warsztat? Mo\u017Ce by\u015B... no wiesz. Tu te\u017C teraz jest praca."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch3_diploma_up
+    branchNodeId: zl_diploma
+    nextNodeId: zl_choice
+  - nodeId: zl_diploma
+    lines:
+    - speakerId: mum
+      language: 0
+      text: "I ten dyplom dalej wisi na pinezkach? Marek mi m\xF3wi\u0142. Synku, magister filozofii przy garach..."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Mama m\xF3wi to bez wyrzutu. Z tym, co po polsku nazywa si\u0119 \"no ale\"."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: zl_choice
+  - nodeId: zl_choice
+    lines: []
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Obiecuj\u0119, \u017Ce przylec\u0119 w sierpniu. Bilet do Krakowa kosztuje mniej ni\u017C obiad w Temple Bar."
+      targetNodeId: zl_visit
+      requiredFlag: 
+    - choiceText: "M\xF3wi\u0119, \u017Ce Dublin to teraz m\xF3j dom."
+      targetNodeId: zl_home
+      requiredFlag: 
+    - choiceText: "Zmieniam temat na pogod\u0119."
+      targetNodeId: zl_weather
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: zl_visit
+    lines:
+    - speakerId: mum
+      language: 0
+      text: "W sierpniu? Kubu\u015B! Ojciec b\u0119dzie udawa\u0142, \u017Ce mu wszystko jedno. Upiek\u0119 sernik."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch4_promised_visit
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -10
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: zl_home
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Po drugiej stronie d\u0142uga cisza. Potem szelest, jakby mama zakry\u0142a s\u0142uchawk\u0119 d\u0142oni\u0105."
+    - speakerId: mum
+      language: 0
+      text: No... dobrze. Jak ci tam dobrze, to dobrze.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Powiedzia\u0142em to pierwszy raz na g\u0142os. Nie wiem, czy to prawda. Wiem, \u017Ce zabola\u0142o nas oboje."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch4_dublin_home
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 5
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: zl_weather
+    lines:
+    - speakerId: mum
+      language: 0
+      text: "U was pada? U nas te\u017C. Widzisz, nie ma r\xF3\u017Cnicy. To wracaj."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Mama wygrywa ka\u017Cd\u0105 rozmow\u0119 o pogodzie."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

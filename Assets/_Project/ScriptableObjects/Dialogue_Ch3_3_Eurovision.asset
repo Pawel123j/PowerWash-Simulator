@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch3_3_Eurovision
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: ev_1
+  nodes:
+  - nodeId: ev_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Sobota, 15 maja. Fina\u0142 Eurowizji w Stambule. Ca\u0142y dom na jednej kanapie przed telewizorem pani Byrne, w kt\xF3ry trzeba co godzin\u0119 uderzy\u0107 z boku."
+    - speakerId: marek
+      language: 0
+      text: "Blue Caf\xE9! Kuba, Polska \u015Bpiewa! Dwa tygodnie w Unii i od razu w finale. To jest znak."
+    - speakerId: agnieszka
+      language: 0
+      text: Marek, to konkurs piosenki, nie referendum akcesyjne.
+    - speakerId: darius
+      language: 0
+      text: "Litwa nawet nie wesz\u0142a do fina\u0142u. Kibicuj\u0119 Irlandii. Z lito\u015Bci."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Irlandczycy wygrywali ten konkurs siedem razy. Teraz siedz\u0105 w pubach i z g\xF3ry \u015Bmiej\u0105 si\u0119 ze swojego ch\u0142opaka z ballad\u0105. Wstyd za to, \u017Ce ju\u017C si\u0119 nie wygrywa: to te\u017C chyba narodowe."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Lepi\u0119 pierogi dla ca\u0142ego domu. Ruskie, jak u mamy."
+      targetNodeId: ev_pierogi
+      requiredFlag: 
+    - choiceText: "Wymiguj\u0119 si\u0119 i id\u0119 spa\u0107 przed p\xF3\u0142noc\u0105."
+      targetNodeId: ev_sleep
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: ev_pierogi
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "M\u0105ka, ziemniaki i irlandzki cottage cheese, kt\xF3ry udaje twar\xF3g. Dwana\u015Bcie euro. Agnieszka wa\u0142kuje, Darius lepi krzywo, Marek je surowe ciasto."
+    - speakerId: mum
+      language: 0
+      text: "Twarogu nie ma? To we\u017A ten ich serek i ods\u0105cz przez gaz\u0119. I cebul\u0119 zeszklij, Kubu\u015B, nie przypal!"
+    - speakerId: kuba_thought
+      language: 0
+      text: Zeszklona, nie przypalona. Trzy milimetry, jak u Declana. Pierwszy raz od przyjazdu w kuchni pachnie domem.
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch3_pierogi
+    outcome:
+      moneyEuros: -12
+      energy: -5
+      homesickness: -10
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: ev_end
+  - nodeId: ev_sleep
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Przez \u015Bcian\u0119 s\u0142ycha\u0107, jak Marek liczy punkty po francusku. Douze points. Zasypiam gdzie\u015B przy dwunastym kraju."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 10
+      homesickness: 5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: ev_end
+  - nodeId: ev_end
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: 'Wygrywa Ukraina: Ruslana i "Wild Dances". Polska daleko w tabeli, Irlandia jeszcze dalej.'
+    - speakerId: marek
+      language: 0
+      text: "W przysz\u0142ym roku. M\xF3wi\u0119 wam. W przysz\u0142ym roku."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Wsch\xF3d wygra\u0142 w Europie, do kt\xF3rej w\u0142a\u015Bnie weszli\u015Bmy. Mo\u017Ce to te\u017C znak. Marek na pewno tak uwa\u017Ca."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

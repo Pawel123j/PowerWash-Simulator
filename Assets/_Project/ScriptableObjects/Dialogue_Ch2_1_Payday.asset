@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch2_1_Payday
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: pay_1
+  nodes:
+  - nodeId: pay_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Pi\u0105tek, po zamkni\u0119ciu kuchni. Declan stoi przy zlewie z plikiem br\u0105zowych kopert i wywo\u0142uje nazwiska jak na apelu."
+    - speakerId: declan
+      language: 1
+      text: Kooba! There you are. First week's wages. Count it, I'm not a bank.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Koperta. Prawdziwe pieni\u0105dze za prawdziw\u0105 prac\u0119. Przeliczone na z\u0142ot\xF3wki brzmi\u0105 jak wygrana w totka, w Dublinie jak tydzie\u0144 czynszu i kilka obiad\xF3w."
+    teachVocabularyWords:
+    - wages
+    - count
+    - first
+    - week
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: pay_choice
+  - nodeId: pay_choice
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Czynsz u pani Byrne jest dzi\u015B. Mama pyta\u0142a, czy do\u0142o\u017C\u0119 si\u0119 do komunii Oli. A moje trampki przy zlewie \u015Blizgaj\u0105 si\u0119 jak \u0142y\u017Cwy."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Najpierw czynsz. Pani Byrne nie lubi czeka\u0107."
+      targetNodeId: pay_rent
+      requiredFlag: 
+    - choiceText: "Wysy\u0142am pi\u0119\u0107dziesi\u0105t euro do domu."
+      targetNodeId: pay_home
+      requiredFlag: 
+    - choiceText: "Kupuj\u0119 porz\u0105dne buty kuchenne, antypo\u015Blizgowe."
+      targetNodeId: pay_shoes
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: pay_rent
+    lines:
+    - speakerId: byrne
+      language: 1
+      text: Friday and on time? Well now. You're a rare one, love.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Pani Byrne prawie si\u0119 u\u015Bmiechn\u0119\u0142a. W tym domu to jak za\u0107mienie s\u0142o\u0144ca."
+    teachVocabularyWords:
+    - time
+    - rare
+    - love
+    unlockSlangIds: []
+    setFlags:
+    - ch2_rent_on_time
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: pay_end
+  - nodeId: pay_home
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Poczta przy O'Connell Street: formularz przelewu, kolejka, pani za szyb\u0105 z d\u0142ugopisem na sznurku. Wieczorem dzwoni mama."
+    - speakerId: mum
+      language: 0
+      text: "Kubu\u015B, przysz\u0142o! Ola b\u0119dzie mia\u0142a sukienk\u0119 jak ksi\u0119\u017Cniczka. Ojciec m\xF3wi, \u017Ceby\u015B sobie nie odejmowa\u0142 od ust."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Pi\u0119\u0107dziesi\u0105t euro. Dla mamy to p\xF3\u0142 pensji. Dla mnie trzy dni bez kanapki z boczkiem. Uczciwa wymiana."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch2_sent_home
+    outcome:
+      moneyEuros: -50
+      energy: 0
+      homesickness: -10
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: pay_end
+  - nodeId: pay_shoes
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Sklep z odzie\u017C\u0105 robocz\u0105 na Capel Street. Czarne, ci\u0119\u017Ckie, z podeszw\u0105 jak opony traktora."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Czterdzie\u015Bci euro. Ale na mokrej pod\u0142odze stoj\u0119 teraz jak przyspawany. Pierwsza rzecz w Dublinie, kt\xF3ra jest naprawd\u0119 moja."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch2_good_shoes
+    outcome:
+      moneyEuros: -40
+      energy: 10
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: pay_end
+  - nodeId: pay_end
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Koperta chudnie szybciej, ni\u017C si\u0119 wype\u0142nia\u0142a. Za to jestem w niej zapisany jako \"Kooba\". To ju\u017C prawie nazwisko."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

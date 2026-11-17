@@ -1,0 +1,242 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch3_5_Letters
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: lt_1
+  nodes:
+  - nodeId: lt_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Poniedzia\u0142ek. Na wycieraczce w Phibsborough dwie koperty: urz\u0119dowa, z harf\u0105, i druga, z polskimi znaczkami."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch1_fake_bill
+    branchNodeId: lt_pps
+    nextNodeId: lt_home
+  - nodeId: lt_pps
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Department of Social and Family Affairs prosi o \"dodatkowe potwierdzenie adresu\". Rachunek z przysz\u0142ego miesi\u0105ca kto\u015B jednak przeczyta\u0142."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Potrzebuj\u0119 pisma od w\u0142a\u015Bcicielki, \u017Ce tu mieszkam. Od pani Byrne. Od \"I will, yeah\"."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch2_rent_on_time
+    branchNodeId: lt_signs
+    nextNodeId: lt_fee
+  - nodeId: lt_signs
+    lines:
+    - speakerId: byrne
+      language: 1
+      text: You paid on time, love. Course I'll sign. I will, yeah. And this time I mean it.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Pierwszy raz \"I will, yeah\" znaczy \"tak\". Czynsz zap\u0142acony na czas to w Dublinie najlepsza rekomendacja."
+    teachVocabularyWords:
+    - course
+    - sign
+    - mean
+    unlockSlangIds: []
+    setFlags:
+    - ch3_byrne_signed
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: lt_home
+  - nodeId: lt_fee
+    lines:
+    - speakerId: byrne
+      language: 1
+      text: A letter? That's paperwork, love. Paperwork is twenty euro.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Dwadzie\u015Bcia euro za jedno zdanie i podpis. Albo wiecz\xF3r z Agnieszk\u0105 nad pismem, kt\xF3re napisz\u0119 sam."
+    teachVocabularyWords:
+    - letter
+    - paperwork
+    - twenty
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "P\u0142ac\u0119 dwadzie\u015Bcia euro."
+      targetNodeId: lt_pay
+      requiredFlag: 
+    - choiceText: "Prosz\u0119 Agnieszk\u0119, \u017Ceby pomog\u0142a mi napisa\u0107 pismo."
+      targetNodeId: lt_agnieszka
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: lt_pay
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Pani Byrne podpisuje, nie czytaj\u0105c. Banknot znika w kieszeni fartucha szybciej ni\u017C d\u0142ugopis."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch3_byrne_signed
+    outcome:
+      moneyEuros: -20
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: lt_home
+  - nodeId: lt_agnieszka
+    lines:
+    - speakerId: agnieszka
+      language: 0
+      text: "\"To whom it may concern\". Zawsze tak si\u0119 zaczyna. Nie, Kuba, \"concern\" przez \"c\". Siadaj, piszemy od nowa."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Trzy wersje, dwie herbaty i jedno \"Yours faithfully\". Urz\u0119dowy angielski jest jak \u0142acina: nikt nim nie m\xF3wi, ale ka\u017Cdy musi w nim umie\u0107 prosi\u0107."
+    teachVocabularyWords:
+    - concern
+    unlockSlangIds: []
+    setFlags:
+    - ch3_wrote_letter
+    outcome:
+      moneyEuros: 0
+      energy: -10
+      homesickness: -5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: lt_home
+  - nodeId: lt_home
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Koperta od mamy. W \u015Brodku dyplom magistra filozofii, zwini\u0119ty w rulon i owini\u0119ty w \"Gazet\u0119 Wyborcz\u0105\"."
+    - speakerId: mum
+      language: 0
+      text: "Kubu\u015B, przyszed\u0142 z uczelni. Wysy\u0142am, bo mo\u017Ce ci si\u0119 tam przyda. Ojciec m\xF3wi, \u017Ce w Irlandii te\u017C s\u0105 uniwersytety."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch2_sent_home
+    branchNodeId: lt_photo
+    nextNodeId: lt_choice
+  - nodeId: lt_photo
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Pod dyplomem zdj\u0119cie: Ola w bia\u0142ej sukience komunijnej, w wianku, z dwoma z\u0119bami mniej ni\u017C w zesz\u0142ym roku. Na odwrocie krzywymi literami: \"Dzi\u0119kuj\u0119, Kuba!\""
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -10
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: lt_choice
+  - nodeId: lt_choice
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Pi\u0119\u0107 lat Platona, Kanta i Camusa w rulonie z \"Wyborczej\". Co z tym zrobi\u0107 w pokoju bez gwo\u017Adzi?"
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: Przypinam dyplom nad materacem.
+      targetNodeId: lt_wall
+      requiredFlag: 
+    - choiceText: Chowam go na dno walizki.
+      targetNodeId: lt_case
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: lt_wall
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Wisi krzywo, na pinezkach od Agnieszki. Marek m\xF3wi, \u017Ce to pierwszy dyplom w historii tego domu. Darius salutuje."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch3_diploma_up
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: lt_case
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Na dno walizki, pod sweter od mamy. Nie dlatego, \u017Ce si\u0119 wstydz\u0119. Dlatego, \u017Ce tutaj jeszcze na niego nie zarobi\u0142em."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch3_diploma_packed
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

@@ -1,0 +1,187 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch5_5_Dad
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: fluent
+  nodes:
+  - nodeId: fluent
+    lines: []
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: da_1
+  - nodeId: da_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Pi\u0105tek wiecz\xF3r. Telefon z Polski. Tym razem dzwoni tata. Tata nie dzwoni nigdy."
+    - speakerId: dad
+      language: 0
+      text: "Kuba. Mama si\u0119 martwi. W telewizji m\xF3wi\u0105, \u017Ce u was kryzys. Euro tanie jak barszcz, z\u0142ot\xF3wka mocna. Krak\xF3w szuka kucharzy na Euro dwa tysi\u0105ce dwana\u015Bcie."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Tata m\xF3wi pe\u0142nymi zdaniami. To znaczy, \u017Ce \u0107wiczy\u0142."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch4_promised_visit
+    branchNodeId: da_visit
+    nextNodeId: da_2
+  - nodeId: da_visit
+    lines:
+    - speakerId: dad
+      language: 0
+      text: "Jak przyjecha\u0142e\u015B wtedy w sierpniu, mama potem tydzie\u0144 p\u0142aka\u0142a w kuchni. M\xF3wi\u0142a, \u017Ce od cebuli."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: da_2
+  - nodeId: da_2
+    lines:
+    - speakerId: dad
+      language: 0
+      text: "Nie m\xF3wi\u0119, \u017Ceby\u015B wraca\u0142. M\xF3wi\u0119, \u017Ce pok\xF3j jest. I p\xF3\u0142ka na ten tw\xF3j dyplom."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch4_dublin_home
+    branchNodeId: da_home
+    nextNodeId: da_choice
+  - nodeId: da_home
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Dwa lata temu powiedzia\u0142em mamie, \u017Ce Dublin to m\xF3j dom. Tata to pami\u0119ta. Tata wszystko pami\u0119ta i nic nie m\xF3wi."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: da_choice
+  - nodeId: da_choice
+    lines: []
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "M\xF3wi\u0119, \u017Ce si\u0119 zastanowi\u0119. Naprawd\u0119."
+      targetNodeId: da_think
+      requiredFlag: 
+    - choiceText: "M\xF3wi\u0119, \u017Ce zostaj\u0119. Tu jest moje \u017Cycie."
+      targetNodeId: da_stay
+      requiredFlag: 
+    - choiceText: "Pytam tat\u0119, jak si\u0119 czuje."
+      targetNodeId: da_ask
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: da_think
+    lines:
+    - speakerId: dad
+      language: 0
+      text: "No. To si\u0119 zastan\xF3w. Tylko nie za d\u0142ugo, bo mama zd\u0105\u017Cy wszystko poprzestawia\u0107."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch5_considering
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: da_stay
+    lines:
+    - speakerId: dad
+      language: 0
+      text: "Rozumiem. Ja w twoim wieku te\u017C nikogo nie s\u0142ucha\u0142em. Dlatego jestem tu, gdzie jestem."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Nie wiem, czy to pochwa\u0142a, czy ostrze\u017Cenie. U taty zwykle jedno i drugie."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch5_told_dad_staying
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: da_ask
+    lines:
+    - speakerId: dad
+      language: 0
+      text: "Ja? Dobrze. Starzej\u0119 si\u0119, ale dobrze. Wracaj albo nie wracaj, ale dzwo\u0144 cz\u0119\u015Bciej."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Pierwszy raz od czterech lat rozmawiamy o czym\u015B innym ni\u017C pieni\u0105dze i pogoda."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch5_asked_dad
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -10
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

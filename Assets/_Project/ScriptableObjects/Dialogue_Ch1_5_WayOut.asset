@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch1_5_WayOut
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: way_1
+  nodes:
+  - nodeId: way_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Po zmianie. Kuba siedzi na skrzynce po pomidorach za restauracj\u0105 i gapi si\u0119 na formularz PPS."
+    - speakerId: marek
+      language: 0
+      text: "S\u0142uchaj, znam go\u015Bcia. Za dwadzie\u015Bcia euro zrobi ci rachunek za pr\u0105d na twoje nazwisko. Wygl\u0105da jak prawdziwy, nikt nie sprawdza."
+    - speakerId: declan
+      language: 1
+      text: What's that face? Ah, the PPS. Everyone has that problem. Give me the form.
+    - speakerId: declan
+      language: 1
+      text: I'll write you a letter. You work here, you get your letters here. The office knows me.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Dwie drogi. Go\u015B\u0107 Marka jest szybki. Declan jest... Declanem."
+    teachVocabularyWords:
+    - face
+    - form
+    - letter
+    - work
+    - office
+    - knows
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Bior\u0119 list od Declana."
+      targetNodeId: way_letter
+      requiredFlag: 
+    - choiceText: "P\u0142ac\u0119 go\u015Bciowi Marka za rachunek."
+      targetNodeId: way_fake_bill
+      requiredFlag: 
+    - choiceText: "(My\u015Bl o Syzyfie) Pytam Declana, kto jemu pom\xF3g\u0142 w Bostonie."
+      targetNodeId: way_boston
+      requiredFlag: ch1_sisyphus
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: way_letter
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Good man. Now go, table six wants plates, not paperwork.
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch1_declan_letter
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 10
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: way_end
+  - nodeId: way_fake_bill
+    lines:
+    - speakerId: marek
+      language: 0
+      text: "M\u0105dry wyb\xF3r. Jutro b\u0119dziesz mia\u0142 naj\u0142adniejszy rachunek w Dublinie."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Czuj\u0119 si\u0119, jakbym podpisywa\u0142 co\u015B, czego nie przeczyta\u0142em."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch1_fake_bill
+    outcome:
+      moneyEuros: -20
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: way_end
+  - nodeId: way_boston
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Boston, eighty-six. Same story, different stamps. An old cook wrote me a letter. So now I write letters, son. That's how it works.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Ka\u017Cdy kiedy\u015B od tego zaczyna\u0142. Nawet Declan. Zw\u0142aszcza Declan."
+    teachVocabularyWords:
+    - story
+    - different
+    - stamps
+    - old
+    - cook
+    - son
+    - works
+    unlockSlangIds: []
+    setFlags:
+    - ch1_declan_letter
+    - ch1_declan_story
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -5
+      integration: 15
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: way_end
+  - nodeId: way_end
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Jutro znowu urz\u0105d. Numerek 247, podej\u015Bcie drugie."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

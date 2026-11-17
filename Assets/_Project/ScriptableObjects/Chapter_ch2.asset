@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a091640ec87214ebe9cf95118fbb3b, type: 3}
+  m_Name: Chapter_ch2
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Story.StoryChapter
+  chapterId: ch2
+  title: "Rozdzia\u0142 2: Pierwsza wyp\u0142ata"
+  beats:
+  - beatId: ch2_payday
+    day: 7
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 0239353dbfa3f594290eea9a04bcb2dd, type: 2}
+    endsChapter: 0
+  - beatId: ch2_siobhan
+    day: 8
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 167067b30dd0fa045a835b5efc36dac6, type: 2}
+    endsChapter: 0
+  - beatId: ch2_brunch
+    day: 9
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 5e9682b87abaa104988e771f1088cee7, type: 2}
+    endsChapter: 0
+  - beatId: ch2_pub
+    day: 10
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: f5c1429668dc3f141a2f64634299fed6, type: 2}
+    endsChapter: 0
+  - beatId: ch2_tomek
+    day: 11
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 8a2104bc865894241b4379718ce6ff2a, type: 2}
+    endsChapter: 0
+  - beatId: ch2_knife
+    day: 12
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 0c48de598d02e2e48b3d7137e3e7d436, type: 2}
+    endsChapter: 1
+  startsOn: 
+  relocations: []

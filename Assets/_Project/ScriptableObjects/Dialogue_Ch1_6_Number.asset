@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch1_6_Number
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: number_1
+  nodes:
+  - nodeId: number_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Ta sama kolejka, ta sama urz\u0119dniczka, ten sam numerek. Inny papier w r\u0119ku."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch1_fake_bill
+    branchNodeId: number_fake
+    nextNodeId: number_letter
+  - nodeId: number_letter
+    lines:
+    - speakerId: clerk
+      language: 1
+      text: A letter from Declan O'Sullivan? He sends me a new one every month. Grand, here's your number.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Siedem cyfr i litera. \u017Badna liczba jeszcze mnie tak nie wzruszy\u0142a."
+    teachVocabularyWords:
+    - letter
+    - month
+    - here's
+    - your
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: number_loop_breaks
+  - nodeId: number_fake
+    lines:
+    - speakerId: clerk
+      language: 1
+      text: An electricity bill... dated next month? Hm. Well. It has your name on it. Here's your number.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Rachunek z dat\u0105 z przysz\u0142ego miesi\u0105ca. Go\u015B\u0107 Marka ma fantazj\u0119. Urz\u0119dniczka ma lito\u015B\u0107. Albo kolejk\u0119 do trzysetki."
+    teachVocabularyWords:
+    - electricity
+    - month
+    - here's
+    - your
+    unlockSlangIds: []
+    setFlags:
+    - ch1_clerk_noticed
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: number_loop_breaks
+  - nodeId: number_loop_breaks
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Z numerem PPS bank otwiera konto w dziesi\u0119\u0107 minut. Z kontem pani Byrne wzdycha i wpisuje Kub\u0119 do umowy. P\u0119tla p\u0119ka."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: number_mum
+  - nodeId: number_mum
+    lines:
+    - speakerId: mum
+      language: 0
+      text: "Kubu\u015B? Wys\u0142a\u0142am paczk\u0119. S\u0142oik bigosu, s\u0142oik og\xF3rk\xF3w i skarpetki. Jesz co\u015B ciep\u0142ego?"
+    - speakerId: kuba_thought
+      language: 0
+      text: "Bigos w kuchni na dziewi\u0119\u0107 os\xF3b. Znika w siedem minut. M\xF3j rekord zmywaka to wci\u0105\u017C d\u0142u\u017Cej."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 15
+      homesickness: -10
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: number_end
+  - nodeId: number_end
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Pierwszy tydzie\u0144 w Dublinie: oszukany, bez \u0142\xF3\u017Cka, za to z numerem PPS i s\u0142oikiem bigosu. Brudne talerze. Czyste marzenia."
+    - speakerId: narrator
+      language: 0
+      text: "Koniec Rozdzia\u0142u 1: Przyjazd."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

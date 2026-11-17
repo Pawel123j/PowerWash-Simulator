@@ -1,0 +1,221 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch5_4_List
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: fluent
+  nodes:
+  - nodeId: fluent
+    lines: []
+    teachVocabularyWords:
+    - i
+    - won't
+    - dress
+    - it
+    - up
+    - we're
+    - down
+    - forty
+    - percent
+    - can
+    - keep
+    - this
+    - kitchen
+    - open
+    - if
+    - two
+    - people
+    - go
+    - or
+    - everyone
+    - takes
+    - fewer
+    - hours
+    - ah
+    - sure
+    - look
+    - nobody
+    - goes
+    - not
+    - month
+    - better
+    - than
+    - you
+    - were
+    - kooba
+    - broke
+    - four
+    - plates
+    - your
+    - first
+    - week
+    - fine
+    - bartek
+    - stays
+    - he's
+    - responsibility
+    - again
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: li_1
+  - nodeId: li_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Czwartek. Declan zbiera kuchni\u0119 przy wydawce. W r\u0119ku kartka."
+    - speakerId: declan
+      language: 1
+      text: I won't dress it up. We're down forty percent. I can keep this kitchen open if two people go. Or if everyone takes fewer hours.
+    - speakerId: kuba_thought
+      language: 0
+      text: Dwie osoby. Na kartce nie ma nazwisk. Jeszcze.
+    teachVocabularyWords:
+    - dress
+    - forty
+    - percent
+    - fewer
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch4_mentor_bartek
+    branchNodeId: li_bartek
+    nextNodeId: li_choice
+  - nodeId: li_bartek
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Bartek stoi przy zlewie, przy kt\xF3rym Kuba uczy\u0142 go zeskrobywa\u0107 resztki. Patrzy w pod\u0142og\u0119."
+    - speakerId: bartek
+      language: 0
+      text: "Ja jestem ostatni, to ja wylec\u0119 pierwszy. Taka jest zasada, prawda?"
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: li_choice
+  - nodeId: li_choice
+    lines: []
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Oddaj\u0119 swoje soboty, \u017Ceby nikt nie musia\u0142 odchodzi\u0107."
+      targetNodeId: li_share
+      requiredFlag: 
+    - choiceText: "Milcz\u0119. Ka\u017Cdy ma swoje rachunki."
+      targetNodeId: li_quiet
+      requiredFlag: 
+    - choiceText: "M\xF3wi\u0119 Declanowi, \u017Ce Bartek jest lepszy, ni\u017C ja by\u0142em na pocz\u0105tku."
+      targetNodeId: li_vouch
+      requiredFlag: ch4_mentor_bartek
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: li_share
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Po Kubie r\u0119k\u0119 podnosi drugi kucharz, potem kelnerka. Declan skre\u015Bla sobie pensj\u0119 na pa\u017Adziernik."
+    - speakerId: declan
+      language: 1
+      text: Ah, sure look. Nobody goes. Not this month.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Czterdzie\u015Bci euro mniej w tygodniu. W zamian nikt nie stoi jutro z reklam\xF3wk\u0105 pod drzwiami."
+    teachVocabularyWords:
+    - month
+    - goes
+    unlockSlangIds:
+    - slang_sure_look
+    setFlags:
+    - ch5_shared_hours
+    outcome:
+      moneyEuros: -40
+      energy: 10
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: li_quiet
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "W pi\u0105tek na grafiku brakuje dw\xF3ch nazwisk."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Ka\u017Cdy ma swoje rachunki. Powtarzam to sobie przez ca\u0142\u0105 zmian\u0119. Z ka\u017Cdym razem brzmi gorzej."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch5_kept_quiet
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: li_vouch
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Better than you were? Kooba, you broke four plates your first week.
+    - speakerId: kuba_thought
+      language: 0
+      text: Trzy. Ale nie poprawiam go.
+    - speakerId: declan
+      language: 1
+      text: ...Fine. Bartek stays. He's your responsibility. Again.
+    teachVocabularyWords:
+    - broke
+    - first
+    unlockSlangIds: []
+    setFlags:
+    - ch5_kept_bartek
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

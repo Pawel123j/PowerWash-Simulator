@@ -1,0 +1,176 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch4_4_School
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: fluent
+  nodes:
+  - nodeId: fluent
+    lines: []
+    teachVocabularyWords:
+    - half
+    - the
+    - chefs
+    - in
+    - this
+    - city
+    - went
+    - through
+    - cathal
+    - brugha
+    - street
+    - a
+    - proper
+    - certificate
+    - kooba
+    - i'll
+    - pay
+    - you
+    - so
+    - you'll
+    - turn
+    - up
+    - even
+    - for
+    - man
+    - who
+    - likes
+    - his
+    - sink
+    - cert
+    - is
+    - your
+    - call
+    - offer
+    - stands
+    - till
+    - september
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: sc_1
+  - nodeId: sc_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Czwartek. Declan k\u0142adzie na desce ulotk\u0119: Dublin Institute of Technology, szko\u0142a kulinarna przy Cathal Brugha Street. Kursy wieczorowe."
+    - speakerId: declan
+      language: 1
+      text: Half the chefs in this city went through Cathal Brugha Street. A proper certificate, Kooba. I'll pay half. You pay half, so you'll turn up.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Po\u0142owa wpisowego to osiemdziesi\u0105t euro. Dwa wieczory w tygodniu przez rok, po dwunastu godzinach w kuchni."
+    teachVocabularyWords:
+    - certificate
+    - half
+    - pay
+    - proper
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch3_stays_sink
+    branchNodeId: sc_sink
+    nextNodeId: sc_choice
+  - nodeId: sc_sink
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Even for a man who likes his sink. A cert is a cert.
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: sc_choice
+  - nodeId: sc_choice
+    lines: []
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Zapisuj\u0119 si\u0119. Osiemdziesi\u0105t euro."
+      targetNodeId: sc_yes
+      requiredFlag: 
+    - choiceText: "Dzi\u0119kuj\u0119, ale nie teraz."
+      targetNodeId: sc_no
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: sc_yes
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Formularz po angielsku, w trzech egzemplarzach. Kuba wype\u0142nia go sam, bez Agnieszki. W rubryce \"Previous education\" wpisuje: Master of Arts, Philosophy."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Pierwszy raz od dw\xF3ch lat kto\u015B pyta o m\xF3j dyplom. W formularzu na kurs gotowania."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch4_cookery_school
+    outcome:
+      moneyEuros: -80
+      energy: -5
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: sc_no
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Your call. The offer stands till September.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Dwana\u015Bcie godzin w kuchni i jeszcze szko\u0142a. Mo\u017Ce za rok. Za rok zawsze jest wi\u0119cej czasu. Przynajmniej teraz tak si\u0119 wydaje."
+    teachVocabularyWords:
+    - call
+    - offer
+    - stands
+    unlockSlangIds: []
+    setFlags:
+    - ch4_school_later
+    outcome:
+      moneyEuros: 0
+      energy: 5
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

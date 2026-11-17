@@ -1,0 +1,17 @@
+{
+    "name": "Zmywak.Kitchen",
+    "rootNamespace": "Zmywak.Kitchen",
+    "references": [
+        "Zmywak.Core",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

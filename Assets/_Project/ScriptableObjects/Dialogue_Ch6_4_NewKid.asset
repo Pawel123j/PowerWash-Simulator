@@ -1,0 +1,243 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch6_4_NewKid
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: fluent
+  nodes:
+  - nodeId: fluent
+    lines: []
+    teachVocabularyWords:
+    - sorry
+    - i
+    - am
+    - thiago
+    - the
+    - school
+    - say
+    - you
+    - need
+    - a
+    - man
+    - for
+    - wash
+    - my
+    - english
+    - is
+    - little
+    - liam
+    - from
+    - cork
+    - there's
+    - no
+    - work
+    - at
+    - home
+    - so
+    - here
+    - it
+    - true
+    - were
+    - dishwasher
+    - in
+    - dublin
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: nk
+  - nodeId: nk
+    lines: []
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch5_stays
+    branchNodeId: nk_dublin
+    nextNodeId: nk_away
+  - nodeId: nk_away
+    lines: []
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch5_goes_to_perth
+    branchNodeId: nk_perth
+    nextNodeId: nk_poland
+  - nodeId: nk_dublin
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Czwartek. W drzwiach zaplecza stoi ch\u0142opak z plecakiem, opalony nie na irlandzk\u0105 pogod\u0119. Thiago z Goi\xE2nii, student angielskiego, pierwszy dzie\u0144 na zmywaku."
+    - speakerId: thiago
+      language: 1
+      text: Sorry... I am Thiago. The school say you need a man for the wash. My English is... little.
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: nk_choice
+  - nodeId: nk_perth
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Czwartek. Z samolotu dla zmiany przylatuje nowy pomocnik do zmywaka. Piegowaty, spalony s\u0142o\u0144cem po jednym dniu, z akcentem z Cork."
+    - speakerId: liam
+      language: 1
+      text: Liam. From Cork. There's no work at home, so here I am. Is it true you were a dishwasher in Dublin?
+    - speakerId: kuba_thought
+      language: 0
+      text: "Irlandczyk ucieka przed kryzysem na drugi koniec \u015Bwiata i trafia do zlewu Polaka. Dwadzie\u015Bcia lat temu by\u0142oby to nie do pomy\u015Blenia. Sze\u015B\u0107 lat temu te\u017C."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: nk_choice
+  - nodeId: nk_poland
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Czwartek. Do hotelowej kuchni przychodzi nowy pomocnik: O\u0142eh ze Lwowa, dwadzie\u015Bcia dwa lata, studiowa\u0142 budownictwo. Po polsku m\xF3wi lepiej ni\u017C Kuba po angielsku sze\u015B\u0107 lat temu."
+    - speakerId: oleh
+      language: 0
+      text: "Dzie\u0144 dobry. Agencja m\xF3wi\u0142a, \u017Ce jest praca na zmywaku. Ja... szybko si\u0119 ucz\u0119."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Agencja. Zmywak. \"Szybko si\u0119 ucz\u0119\". Kto\u015B kiedy\u015B powiedzia\u0142 to samo w Dublinie. Ja."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: nk_choice
+  - nodeId: nk_choice
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Teraz to ja jestem Declanem. Du\u017Cy, zm\u0119czony, z niebieskimi plastrami w kieszeni."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Pokazuj\u0119 mu wszystko od pocz\u0105tku: zeskrob, sp\u0142ucz, szoruj, uk\u0142adaj kosz."
+      targetNodeId: nk_teach
+      requiredFlag: 
+    - choiceText: "Krzycz\u0119 jak Declan. Kto\u015B musi."
+      targetNodeId: nk_shout
+      requiredFlag: 
+    - choiceText: "Daj\u0119 mu sw\xF3j numer i m\xF3wi\u0119: \"Ka\u017Cdy kiedy\u015B od tego zaczyna\u0142\"."
+      targetNodeId: nk_words
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: nk_teach
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Talerz, patelnia, szklanka pod \u015Bwiat\u0142o. Kosz kafelek przy kafelku. Gdzie le\u017C\u0105 niebieskie plastry."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Te same ruchy co sze\u015B\u0107 lat temu, tylko teraz to ja je pokazuj\u0119. R\u0119ce pami\u0119taj\u0105 lepiej ni\u017C g\u0142owa."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch6_taught_the_new_boy
+    outcome:
+      moneyEuros: 0
+      energy: -5
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: nk_shout
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "\"Plates! I need plates, not philosophy!\" - wychodzi Kubie samo, z akcentem Declana. Ca\u0142a kuchnia wybucha \u015Bmiechem. Nowy te\u017C, cho\u0107 nie wie dlaczego."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Declan krzycza\u0142, bo by\u0142 Declanem. Ja krzycz\u0119, bo nauczy\u0142em si\u0119 od Declana. Tak przechodz\u0105 tradycje."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch6_shouted_like_declan
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: nk_words
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Powiedzia\u0142em to po polsku, po angielsku i r\u0119kami. Zrozumia\u0142 we wszystkich trzech j\u0119zykach."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch6_passed_it_on
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

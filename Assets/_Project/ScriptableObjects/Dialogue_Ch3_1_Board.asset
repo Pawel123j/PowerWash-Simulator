@@ -1,0 +1,223 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch3_1_Board
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: board_1
+  nodes:
+  - nodeId: board_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Czwartek, dziewi\u0105ta rano. Kuchnia bez go\u015Bci wygl\u0105da inaczej: cicha, jasna, pachnie wybielaczem i cebul\u0105."
+    - speakerId: gavin
+      language: 1
+      text: So you're Declan's new project. I'm Gavin. Sous-chef. That means when Declan's not here, I'm God.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Gavin. Zast\u0119pca szefa kuchni. U\u015Bmiecha si\u0119 tak, jak u\u015Bmiecha si\u0119 pies, zanim ugryzie."
+    teachVocabularyWords:
+    - project
+    - means
+    - here
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch2_prep_cook
+    branchNodeId: board_first
+    nextNodeId: board_ask
+  - nodeId: board_ask
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Well, Kooba? Gavin's been doing prep all week and giving out about it. Made up your mind?
+    - speakerId: kuba_thought
+      language: 0
+      text: "\"Giving out\": Gavin robi wyrzuty. Ca\u0142ej kuchni, od tygodnia. Przy mnie zacznie od nowa."
+    teachVocabularyWords:
+    - made
+    - mind
+    - week
+    unlockSlangIds:
+    - slang_giving_out
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Bior\u0119 desk\u0119."
+      targetNodeId: board_take
+      requiredFlag: 
+    - choiceText: "Zostaj\u0119 przy zlewie."
+      targetNodeId: board_sink
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: board_take
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Good man. Apron's on the hook. Gavin, show him the onions.
+    teachVocabularyWords:
+    - apron
+    - hook
+    - show
+    unlockSlangIds: []
+    setFlags:
+    - ch3_prep_cook
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: board_first
+  - nodeId: board_sink
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Fair enough. A good man at the sink is worth two at the board.
+    - speakerId: gavin
+      language: 1
+      text: Knew it. They never stay at the board.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Mo\u017Ce ma racj\u0119. A mo\u017Ce po prostu wiem, gdzie jest moje miejsce. Na razie."
+    teachVocabularyWords:
+    - worth
+    - two
+    unlockSlangIds: []
+    setFlags:
+    - ch3_stays_sink
+    outcome:
+      moneyEuros: 0
+      energy: 5
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: board_end
+  - nodeId: board_first
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Dziesi\u0119\u0107 kilo cebuli, pi\u0119\u0107 kilo marchwi, seler. Gavin stawia obok minutnik i patrzy."
+    - speakerId: gavin
+      language: 1
+      text: Brunoise. Three millimetres. My granny cuts faster, and she's been dead since ninety-eight.
+    teachVocabularyWords:
+    - three
+    - faster
+    - dead
+    unlockSlangIds: []
+    setFlags:
+    - ch3_at_board
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Tn\u0119 szybko, \u017Ceby nad\u0105\u017Cy\u0107 za minutnikiem."
+      targetNodeId: board_fast
+      requiredFlag: 
+    - choiceText: "Tn\u0119 powoli, tak jak pokaza\u0142 Declan."
+      targetNodeId: board_careful
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: board_fast
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Si\xF3dma cebula. N\xF3\u017C ze\u015Blizguje si\u0119 z k\u0142ykcia. Krew na desce, krew na fartuchu."
+    - speakerId: gavin
+      language: 1
+      text: Ah, for... Blue plaster. So you'll find it in the soup, not the customer.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Niebieski plaster. W kuchni wszystkie s\u0105 niebieskie, bo nie ma niebieskiego jedzenia. Pierwsza lekcja deski."
+    teachVocabularyWords:
+    - blue
+    - plaster
+    - soup
+    - customer
+    unlockSlangIds: []
+    setFlags:
+    - ch3_cut_finger
+    outcome:
+      moneyEuros: 0
+      energy: -10
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: board_end
+  - nodeId: board_careful
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Minutnik dzwoni trzy razy, zanim Kuba ko\u0144czy. Gavin przewraca oczami. Potem Declan bierze \u0142y\u017Ck\u0119 kostek i ogl\u0105da je pod lamp\u0105."
+    - speakerId: declan
+      language: 1
+      text: Three millimetres. Every one. Gavin, look at this.
+    - speakerId: gavin
+      language: 1
+      text: ...Grand. It's grand.
+    - speakerId: kuba_thought
+      language: 0
+      text: W ustach Gavina "grand" brzmi jak przegrana. Uczciwa wymiana.
+    teachVocabularyWords:
+    - every
+    - look
+    unlockSlangIds: []
+    setFlags:
+    - ch3_careful
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: board_end
+  - nodeId: board_end
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Wieczorem r\u0119ce pachn\u0105 cebul\u0105 mimo trzech my\u0107. Mama m\xF3wi\u0142a, \u017Ce pomaga cytryna. Nie mamy cytryny. Mamy cebul\u0119."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a091640ec87214ebe9cf95118fbb3b, type: 3}
+  m_Name: Chapter_ch1
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Story.StoryChapter
+  chapterId: ch1
+  title: "Rozdzia\u0142 1: Przyjazd"
+  beats:
+  - beatId: ch1_arrival
+    day: 1
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: f4e4667f7d116d34084db112f7d3da92, type: 2}
+    endsChapter: 0
+  - beatId: ch1_house
+    day: 2
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 3a7256346e5872c40b723fa4c314a5b9, type: 2}
+    endsChapter: 0
+  - beatId: ch1_pps_office
+    day: 3
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 2f35b86cdf0876b48bfd3f66b40fc1a2, type: 2}
+    endsChapter: 0
+  - beatId: ch1_bank
+    day: 4
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 6f43779b0112142488e2becb6d10976f, type: 2}
+    endsChapter: 0
+  - beatId: ch1_way_out
+    day: 5
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 8cf6b7011f2472841b52ee40e5b8d544, type: 2}
+    endsChapter: 0
+  - beatId: ch1_number
+    day: 6
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 6d3ff879fe5bf1c4694389ccdced2062, type: 2}
+    endsChapter: 1
+  startsOn: 
+  relocations: []

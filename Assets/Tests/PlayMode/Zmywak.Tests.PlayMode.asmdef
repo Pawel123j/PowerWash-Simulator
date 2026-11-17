@@ -1,0 +1,30 @@
+{
+    "name": "Zmywak.Tests.PlayMode",
+    "rootNamespace": "Zmywak.Tests.PlayMode",
+    "references": [
+        "Zmywak.Core",
+        "Zmywak.Kitchen",
+        "Zmywak.Meta",
+        "Zmywak.Narrative",
+        "Zmywak.UI",
+        "Unity.TextMeshPro",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "Unity.InputSystem",
+        "Unity.InputSystem.TestFramework",
+        "UnityEngine.UI"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

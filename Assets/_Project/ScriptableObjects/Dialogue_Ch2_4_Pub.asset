@@ -1,0 +1,224 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch2_4_Pub
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: pub_1
+  nodes:
+  - nodeId: pub_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Poniedzia\u0142ek, wiecz\xF3r po zamkni\u0119ciu kuchni. W poniedzia\u0142ki w restauracji pusto, wi\u0119c kuchnia wychodzi na miasto."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch2_pub_yes
+    branchNodeId: pub_mulligans
+    nextNodeId: pub_home
+  - nodeId: pub_mulligans
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Mulligan's. Ciemne drewno, lepka pod\u0142oga, telewizor z powt\xF3rk\u0105 meczu. Ca\u0142a kuchnia przy jednym stole, nawet Declan, cho\u0107 udaje, \u017Ce przyszed\u0142 tylko na jedno."
+    - speakerId: siobhan
+      language: 1
+      text: Right, rules. I get a round, then you, then him. Nobody leaves till everyone's bought one. That's Ireland.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Siedem os\xF3b, siedem rund. Siedem razy po pi\u0119\u0107 euro. Matematyka jest bezlitosna, ale Guinness \u0142agodzi b\xF3l."
+    teachVocabularyWords:
+    - rules
+    - round
+    - nobody
+    - leaves
+    - everyone
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: pub_round
+  - nodeId: pub_round
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Moja kolej. Barman patrzy wyczekuj\u0105co."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Stawiam rund\u0119 dla wszystkich."
+      targetNodeId: pub_buy
+      requiredFlag: 
+    - choiceText: "Zamawiam tylko dla siebie i udaj\u0119, \u017Ce nie znam zasad."
+      targetNodeId: pub_cheap
+      requiredFlag: 
+    - choiceText: "M\xF3wi\u0119 wprost, \u017Ce mnie nie sta\u0107."
+      targetNodeId: pub_honest
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: pub_buy
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Good man, Kooba. A round from the sink! Now we know you're one of us.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Trzydzie\u015Bci pi\u0119\u0107 euro. Za to Declan po raz pierwszy wym\xF3wi\u0142 moje imi\u0119 bez \"the new fella\" w \u015Brodku."
+    teachVocabularyWords:
+    - one
+    - us
+    - know
+    unlockSlangIds: []
+    setFlags:
+    - ch2_bought_round
+    outcome:
+      moneyEuros: -35
+      energy: -10
+      homesickness: 0
+      integration: 10
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: pub_song
+  - nodeId: pub_cheap
+    lines:
+    - speakerId: siobhan
+      language: 1
+      text: Ah, no. No, no, no. That's not how it works, pet.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Ca\u0142y st\xF3\u0142 patrzy na mnie, jakbym nadepn\u0105\u0142 komu\u015B na psa. Kupuj\u0119 rund\u0119. Za te same pieni\u0105dze, tylko ze wstydem w gratisie."
+    teachVocabularyWords:
+    - how
+    - works
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: -35
+      energy: -10
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: pub_song
+  - nodeId: pub_honest
+    lines:
+    - speakerId: siobhan
+      language: 1
+      text: Ah, sure look, you're grand. Get the next one when you're rich, so.
+    - speakerId: kuba_thought
+      language: 0
+      text: "W Polsce spali\u0142bym si\u0119 ze wstydu. Tu nikt nie robi z tego sprawy. Mo\u017Ce dlatego, \u017Ce ka\u017Cdy przy tym stole kiedy\u015B nie mia\u0142."
+    teachVocabularyWords:
+    - sure
+    - look
+    - next
+    - rich
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: -10
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: pub_song
+  - nodeId: pub_song
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Ko\u0142o p\xF3\u0142nocy kto\u015B zaczyna \u015Bpiewa\u0107 \"The Fields of Athenry\". \u015Apiewa ca\u0142y pub. Kuba nie zna s\u0142\xF3w, ale zna to uczucie: t\u0119sknot\u0119 za miejscem, z kt\xF3rego si\u0119 wyjecha\u0142o."
+    - speakerId: siobhan
+      language: 1
+      text: You're sound, Kooba, d'you know that? Sound. It's the best thing we call anyone.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Irlandczycy wyje\u017Cd\u017Cali za chlebem przez dwie\u015Bcie lat. Mo\u017Ce dlatego tak \u0142atwo nas tu przyjmuj\u0105. Wiedz\u0105, jak to jest."
+    teachVocabularyWords:
+    - best
+    - call
+    - anyone
+    unlockSlangIds:
+    - slang_sound
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: pub_end
+  - nodeId: pub_home
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Wiecz\xF3r w domu w Phibsborough. Agnieszka przy kuchennym stole z fiszkami."
+    - speakerId: agnieszka
+      language: 0
+      text: "Siobh\xE1n? To ta ruda kelnerka? Zaprosi\u0142a ci\u0119, a ty siedzisz tu ze mn\u0105 i fiszkami? Kuba, filozofie, ty naprawd\u0119 nie umiesz \u017Cy\u0107."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Za to umiem spa\u0107. Osiem godzin. Pierwszy raz od przyjazdu."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 15
+      homesickness: 5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: pub_end
+  - nodeId: pub_end
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Przed snem widz\u0119 Tomka w kuchni nad kalkulatorem. Liczy co\u015B, czego nie chce mi pokaza\u0107. M\xF3wi tylko, \u017Ce na budowie \"co\u015B si\u0119 kroi\"."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

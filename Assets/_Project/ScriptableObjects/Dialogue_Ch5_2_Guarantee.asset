@@ -1,0 +1,197 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch5_2_Guarantee
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: fluent
+  nodes:
+  - nodeId: fluent
+    lines: []
+    teachVocabularyWords:
+    - brutal
+    - the
+    - whole
+    - country's
+    - guaranteed
+    - and
+    - nobody
+    - knows
+    - what
+    - it
+    - means
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: gu_1
+  - nodeId: gu_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Wtorek rano. Radio w kuchni: w nocy rz\u0105d zagwarantowa\u0142 wszystkie depozyty w irlandzkich bankach. Wszystkie. Kto\u015B przy zlewie pyta, ile to jest \"wszystkie\". Nikt nie wie."
+    - speakerId: declan
+      language: 1
+      text: Brutal. The whole country's guaranteed, and nobody knows what it means.
+    - speakerId: narrator
+      language: 0
+      text: "Po po\u0142udniu przychodzi Marek. Bez teczki, bez folder\xF3w, w tej samej kurtce co cztery lata temu."
+    - speakerId: marek
+      language: 0
+      text: "Navan. Deweloper zbankrutowa\u0142. Fundamenty i dziura w ziemi, Kuba. Wp\u0142aci\u0142em trzydzie\u015Bci tysi\u0119cy. Kredyt na samoch\xF3d i oszcz\u0119dno\u015Bci mamy."
+    teachVocabularyWords:
+    - whole
+    - guaranteed
+    - means
+    unlockSlangIds:
+    - slang_brutal
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch4_booked_flat
+    branchNodeId: gu_booked
+    nextNodeId: gu_route
+  - nodeId: gu_route
+    lines: []
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch4_no_flat
+    branchNodeId: gu_refused
+    nextNodeId: gu_waited
+  - nodeId: gu_booked
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Moja rezerwacja: pi\u0119\u0107dziesi\u0105t euro. \u015Amieszne pieni\u0105dze przy trzydziestu tysi\u0105cach Marka. Ale to by\u0142o moje pi\u0119\u0107dziesi\u0105t euro w murach, kt\xF3rych nigdy nie by\u0142o."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: gu_ask
+  - nodeId: gu_refused
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Odm\xF3wi\u0142em dwa lata temu. Declan mia\u0142 racj\u0119, jego ojciec mia\u0142 racj\u0119, tylko Marek nie. Nie czuj\u0119 satysfakcji. Czuj\u0119 zimno."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: gu_ask
+  - nodeId: gu_waited
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Powiedzia\u0142em, \u017Ce musz\u0119 to przemy\u015Ble\u0107. My\u015Bla\u0142em tak d\u0142ugo, \u017Ce zd\u0105\u017Cy\u0142o upa\u015B\u0107. Pierwszy raz filozofia mnie uratowa\u0142a."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: gu_ask
+  - nodeId: gu_ask
+    lines:
+    - speakerId: marek
+      language: 0
+      text: "Kuba... po\u017Cycz mi co\u015B. Pi\u0119\u0107dziesi\u0105t. Na czynsz. Oddam, jak... no, oddam."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Po\u017Cyczam mu pi\u0119\u0107dziesi\u0105t euro."
+      targetNodeId: gu_lend
+      requiredFlag: 
+    - choiceText: "M\xF3wi\u0119, \u017Ce sam nie mam."
+      targetNodeId: gu_no
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: gu_lend
+    lines:
+    - speakerId: marek
+      language: 0
+      text: "Dzi\u0119ki. Ty jeden nigdy nie mia\u0142e\u015B \"notions\", filozofie."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch5_lent_marek
+    outcome:
+      moneyEuros: -50
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: gu_no
+    lines:
+    - speakerId: marek
+      language: 0
+      text: "Jasne. Teraz ka\u017Cdy liczy."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Dwa lata temu Marek liczy\u0142 do czterystu tysi\u0119cy. Dzi\u015B do pi\u0119\u0107dziesi\u0119ciu."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

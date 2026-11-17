@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a091640ec87214ebe9cf95118fbb3b, type: 3}
+  m_Name: Chapter_ch6
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Story.StoryChapter
+  chapterId: ch6
+  title: 'Epilog: Listopad 2010'
+  beats:
+  - beatId: ch6_where
+    day: 31
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: c7dc5b8413ace5f42829738283bfca2c, type: 2}
+    endsChapter: 0
+  - beatId: ch6_news
+    day: 32
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 54192416a03574846abf65fe6b679e4a, type: 2}
+    endsChapter: 0
+  - beatId: ch6_others
+    day: 33
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: a7f8526ec1b2e394c8da871697436ff3, type: 2}
+    endsChapter: 0
+  - beatId: ch6_new_kid
+    day: 34
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 3a364cc8d9db00c43ab8924688c910e5, type: 2}
+    endsChapter: 0
+  - beatId: ch6_last_plate
+    day: 35
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 601870e341a9ae14daec64c4151ee00f, type: 2}
+    endsChapter: 1
+  startsOn: 2010-11-29
+  relocations:
+  - ifFlag: ch5_goes_to_perth
+    place: 2
+  - ifFlag: ch5_goes_home
+    place: 1

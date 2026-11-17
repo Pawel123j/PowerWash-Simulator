@@ -1,0 +1,234 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch4_5_Opening
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: fluent
+  nodes:
+  - nodeId: fluent
+    lines: []
+    teachVocabularyWords:
+    - look
+    - at
+    - them
+    - champagne
+    - four
+    - hundred
+    - a
+    - bottle
+    - and
+    - not
+    - one
+    - of
+    - ever
+    - washed
+    - pot
+    - your
+    - man
+    - just
+    - tipped
+    - the
+    - kitchen
+    - five
+    - go
+    - way
+    - outta
+    - that
+    - he's
+    - gaff
+    - in
+    - dalkey
+    - with
+    - helicopter
+    - pad
+    - they
+    - say
+    - kooba
+    - you
+    - saved
+    - my
+    - hand
+    - lamb
+    - night
+    - critic
+    - i
+    - don't
+    - forget
+    - come
+    - me
+    - to
+    - new
+    - place
+    - better
+    - money
+    - glass
+    - walls
+    - whole
+    - city
+    - watching
+    - what
+    - do
+    - deadly
+    - monday
+    - bring
+    - plasters
+    - loyal
+    - declan's
+    - lucky
+    - tell
+    - him
+    - said
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: op_1
+  - nodeId: op_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Pi\u0105tek. Declan otwiera drug\u0105 restauracj\u0119, nad Liffey, w nowym szklanym budynku z widokiem na d\u017Awigi. Na otwarciu p\xF3\u0142 miasta: deweloperzy, bankierzy, kto\u015B z telewizji."
+    - speakerId: gavin
+      language: 1
+      text: Look at them. Champagne at four hundred a bottle, and not one of them ever washed a pot.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Gavin jest szefem kuchni w nowym miejscu. Ma w\u0142asny n\xF3\u017C z Japonii i te same niebieskie plastry co wszyscy."
+    - speakerId: narrator
+      language: 0
+      text: "Ko\u0142o p\xF3\u0142nocy deweloper w r\xF3\u017Cowej koszuli wchodzi do kuchni z plikiem banknot\xF3w."
+    - speakerId: gavin
+      language: 1
+      text: Your man just tipped the kitchen five hundred. Five hundred! Go way outta that. He's a gaff in Dalkey with a helicopter pad, they say.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Pi\u0119\u0107set euro na dwana\u015Bcie os\xF3b. Czterdzie\u015Bci dla mnie. Dwa lata temu tyle zarabia\u0142em przez ca\u0142y dzie\u0144."
+    teachVocabularyWords:
+    - champagne
+    - bottle
+    - pot
+    - tipped
+    - five
+    - hundred
+    - helicopter
+    unlockSlangIds:
+    - slang_go_way
+    - slang_gaff
+    setFlags: []
+    outcome:
+      moneyEuros: 40
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch3_helped_gavin
+    branchNodeId: op_owed
+    nextNodeId: op_offer
+  - nodeId: op_owed
+    lines:
+    - speakerId: gavin
+      language: 1
+      text: Kooba. You saved my hand and my lamb that night with the critic. I don't forget.
+    teachVocabularyWords:
+    - saved
+    - forget
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: op_offer
+  - nodeId: op_offer
+    lines:
+    - speakerId: gavin
+      language: 1
+      text: Come with me to the new place. Better money, glass walls, the whole city watching. What do you say?
+    - speakerId: kuba_thought
+      language: 0
+      text: "Szklane \u015Bciany. Wszyscy b\u0119d\u0105 widzie\u0107, jak pracujemy. Declan m\xF3wi, \u017Ce w takich kuchniach kucharze zaczynaj\u0105 gotowa\u0107 dla widowni, a nie dla go\u015Bci."
+    teachVocabularyWords:
+    - better
+    - walls
+    - watching
+    - say
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Id\u0119 z Gavinem do nowego miejsca."
+      targetNodeId: op_go
+      requiredFlag: 
+    - choiceText: "Zostaj\u0119 u Declana."
+      targetNodeId: op_stay
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: op_go
+    lines:
+    - speakerId: gavin
+      language: 1
+      text: Deadly. Monday. Bring your plasters.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Declan \u015Bciska mi r\u0119k\u0119 tak, jak \u015Bciska si\u0119 r\u0119k\u0119 synowi, kt\xF3ry wyje\u017Cd\u017Ca. Mocno i kr\xF3tko."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch4_with_gavin
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: op_stay
+    lines:
+    - speakerId: gavin
+      language: 1
+      text: Loyal. Declan's lucky. ...Don't tell him I said that.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Zostaj\u0119 tam, gdzie przyj\u0119li mnie z dwudziestoma euro w kieszeni. Mo\u017Ce to sentyment. Mo\u017Ce rozs\u0105dek. W Dublinie czasem to jedno i to samo."
+    teachVocabularyWords:
+    - loyal
+    - lucky
+    unlockSlangIds: []
+    setFlags:
+    - ch4_with_declan
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

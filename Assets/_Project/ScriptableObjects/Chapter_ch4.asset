@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a091640ec87214ebe9cf95118fbb3b, type: 3}
+  m_Name: Chapter_ch4
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Story.StoryChapter
+  chapterId: ch4
+  title: "Rozdzia\u0142 4: Celtycki Tygrys"
+  beats:
+  - beatId: ch4_anniversary
+    day: 19
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 479aecf3bfa841c4c9e3172592585ee1, type: 2}
+    endsChapter: 0
+  - beatId: ch4_flats
+    day: 20
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: a16ff2ebeb068724abc035e49c784705, type: 2}
+    endsChapter: 0
+  - beatId: ch4_zloty
+    day: 21
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 765076be54d09234b99f0ca217608133, type: 2}
+    endsChapter: 0
+  - beatId: ch4_school
+    day: 22
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 04fdf8113dcff1d43a4ef72e85eacf01, type: 2}
+    endsChapter: 0
+  - beatId: ch4_opening
+    day: 23
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 832adf7a46c610745a09a8c41ca411bb, type: 2}
+    endsChapter: 0
+  - beatId: ch4_cranes
+    day: 24
+    requiredFlag: 
+    graph: {fileID: 11400000, guid: 2160128e538d11c40a30051b15ff98e7, type: 2}
+    endsChapter: 1
+  startsOn: 2006-05-01
+  relocations: []

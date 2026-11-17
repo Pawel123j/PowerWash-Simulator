@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch1_2_House
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: house_1
+  nodes:
+  - nodeId: house_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Marek za\u0142atwi\u0142 pok\xF3j. W\u0142a\u015Bciwie: miejsce. Dom w Phibsborough, dwa pi\u0119tra, jedna \u0142azienka, dziewi\u0119\u0107 os\xF3b."
+    - speakerId: marek
+      language: 0
+      text: "To jest Tomek, \u015Bpi po nocce, nie budzi\u0107. To Agnieszka, studiuje angielski. Na g\xF3rze Darius i jego brat, z Kowna. Reszta zmienia si\u0119 co tydzie\u0144."
+    - speakerId: agnieszka
+      language: 0
+      text: "Cze\u015B\u0107! Jak chcesz, mog\u0119 ci\u0119 wieczorami uczy\u0107 s\u0142\xF3wek. W zamian zmywasz po mnie kubki. \u017Bartuj\u0119. Troch\u0119."
+    - speakerId: darius
+      language: 1
+      text: What's the craic, man? Welcome to the madhouse.
+    teachVocabularyWords:
+    - welcome
+    - man
+    unlockSlangIds:
+    - slang_craic
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: house_landlady
+  - nodeId: house_landlady
+    lines:
+    - speakerId: byrne
+      language: 1
+      text: You're the new one? Rent is on Friday. Cash. And no new names on the lease, love, I don't want trouble.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Pytam \u0142amanym angielskim, czy mimo wszystko wpisze mnie do umowy."
+    - speakerId: byrne
+      language: 1
+      text: Put you on the lease? I will, yeah.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Powiedzia\u0142a \"tak\". Marek parska \u015Bmiechem. Okazuje si\u0119, \u017Ce w Irlandii \"I will, yeah\" znaczy \"po moim trupie\"."
+    teachVocabularyWords:
+    - rent
+    - friday
+    - cash
+    - new
+    - names
+    unlockSlangIds:
+    - slang_i_will_yeah
+    setFlags:
+    - ch1_no_lease
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: house_bed
+  - nodeId: house_bed
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Wolnego \u0142\xF3\u017Cka nie ma. Jest kanapa w salonie albo p\xF3\u0142 materaca u Tomka - za dop\u0142at\u0105 dziesi\u0119\u0107 euro."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "\u015Api\u0119 na kanapie w salonie."
+      targetNodeId: house_couch
+      requiredFlag: 
+    - choiceText: "Dop\u0142acam dziesi\u0119\u0107 euro za materac."
+      targetNodeId: house_mattress
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: house_couch
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Salon to tak\u017Ce kuchnia, korytarz i kino. O drugiej w nocy kto\u015B sma\u017Cy jajecznic\u0119."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch1_couch
+    outcome:
+      moneyEuros: 0
+      energy: -10
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: house_end
+  - nodeId: house_mattress
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: Tomek chrapie jak betoniarka na wolnych obrotach. Ale to przynajmniej materac.
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch1_mattress
+    outcome:
+      moneyEuros: -10
+      energy: 5
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: house_end
+  - nodeId: house_end
+    lines:
+    - speakerId: agnieszka
+      language: 0
+      text: "I tak w tym domu nikt nie \u015Bpi. Witaj w Dublinie!"
+    - speakerId: kuba_thought
+      language: 0
+      text: "Dziewi\u0119\u0107 os\xF3b, jedna \u0142azienka i ani jednego nazwiska na umowie. Co\u015B mi m\xF3wi, \u017Ce to si\u0119 jeszcze zem\u015Bci."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

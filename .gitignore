@@ -1,0 +1,102 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+
+# Asset meta backups / crash reports
+sysinfo.txt
+*.stackdump
+crashlytics-build.properties
+
+# Visual Studio / Rider / VS Code
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Android/iOS build artifacts
+.utmp/
+*.apk
+*.aab
+*.ipa
+ExportedObj/
+.gradle/
+[Bb]uilds/
+*.xcodeproj/
+*.xcworkspace/
+Pods/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Unity3D generated meta files that Unity itself excludes
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Never ignore .meta files for tracked assets
+!*.meta
+
+# Written by the Performance Testing package during player builds (normally removed afterwards,
+# left behind when a build is interrupted). Must come after !*.meta to also cover their .meta files.
+/[Aa]ssets/[Rr]esources/PerformanceTestRun*
+
+# Temporary scene the Test Framework creates for a PlayMode run (left behind when a run is interrupted)
+/[Aa]ssets/InitTestScene*
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+.vs/
+.env
+.env.*
+
+# BEGIN UNITY GITHUB UPLOAD RULES
+
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+.vs/
+.idea/
+*.csproj
+*.sln
+*.user
+
+.env
+.env.*
+*.pem
+*.pfx
+*.p12
+*.key
+
+# END UNITY GITHUB UPLOAD RULES

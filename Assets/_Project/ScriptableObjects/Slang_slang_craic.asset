@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09b4cb4c187e17d4c8286c8dc1d398cb, type: 3}
+  m_Name: Slang_slang_craic
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.SlangDictionary.SlangEntry
+  id: slang_craic
+  phrase: What's the craic?
+  meaning: "\"Co s\u0142ycha\u0107?\", \"co si\u0119 dzieje?\" - powitanie. Craic to dobra zabawa, plotki i atmosfera naraz."

@@ -1,0 +1,187 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch3_4_Gavin
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: gv_1
+  nodes:
+  - nodeId: gv_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Niedziela. W drodze do pracy na ka\u017Cdej latarni plakaty przed referendum 11 czerwca: o obywatelstwie dzieci urodzonych w Irlandii. Na jednym kto\u015B dopisa\u0142 flamastrem: IRELAND IS FULL."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Nie wiem, co znaczy \"full\". Wiem, \u017Ce przez dwa tygodnie wsz\u0119dzie, gdzie stan\u0105\u0142em, by\u0142o jeszcze miejsce na jednego zmywaka."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: gv_2
+  - nodeId: gv_2
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Brunch, sto porcji. Przy wydawce Gavin stawia talerz tak, \u017Ce sos pryska na fartuch."
+    - speakerId: gavin
+      language: 1
+      text: Half this kitchen can't order a pint in English. Declan's not running a restaurant, he's running a charity.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Gavin znowu \"gives out\". M\xF3wi w powietrze. Ale stoi przy mnie."
+    teachVocabularyWords:
+    - half
+    - order
+    - pint
+    - running
+    - charity
+    - wash
+    - cut
+    - learn
+    - enough
+    unlockSlangIds:
+    - slang_giving_out
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Odpowiadam po angielsku. Kr\xF3tko."
+      targetNodeId: gv_answer
+      requiredFlag: 
+    - choiceText: "Udaj\u0119, \u017Ce nie zrozumia\u0142em."
+      targetNodeId: gv_quiet
+      requiredFlag: 
+    - choiceText: "Patrz\u0119 na Tunde."
+      targetNodeId: gv_tunde
+      requiredFlag: ch2_covered_tunde
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: gv_answer
+    lines:
+    - speakerId: kuba
+      language: 1
+      text: I wash. I cut. I learn. Enough?
+    - speakerId: narrator
+      language: 0
+      text: "Cisza przy wydawce. Siobh\xE1n parska \u015Bmiechem."
+    - speakerId: siobhan
+      language: 1
+      text: He has you there, Gav. That's gas.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Pierwsze zdanie, kt\xF3re powiedzia\u0142em w tej kuchni na g\u0142os. Wittgenstein pisa\u0142, \u017Ce granice mojego j\u0119zyka s\u0105 granicami mojego \u015Bwiata. M\xF3j \u015Bwiat w\u0142a\u015Bnie ur\xF3s\u0142 o cztery s\u0142owa."
+    teachVocabularyWords:
+    - has
+    - there
+    unlockSlangIds:
+    - slang_gas
+    setFlags:
+    - ch3_stood_up
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: gv_end
+  - nodeId: gv_quiet
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Udaj\u0119, \u017Ce nie rozumiem. Bariera j\u0119zykowa ma swoje zalety: mo\u017Cna przez ni\u0105 nie s\u0142ysze\u0107."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: gv_end
+  - nodeId: gv_tunde
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Tunde odk\u0142ada stos czystych talerzy na wydawk\u0119. Powoli, talerz po talerzu."
+    - speakerId: tunde
+      language: 1
+      text: Gavin. Who brought you clean plates for the last two hours? The charity?
+    - speakerId: gavin
+      language: 1
+      text: ...Ah, give over, the pair of you.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Tunde puszcza do mnie oko. Dw\xF3ch zmywak\xF3w z dw\xF3ch ko\u0144c\xF3w \u015Bwiata i jeden wsp\xF3lny j\u0119zyk: talerze."
+    teachVocabularyWords:
+    - brought
+    - clean
+    - plates
+    - hours
+    unlockSlangIds: []
+    setFlags:
+    - ch3_tunde_friend
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -5
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: gv_end
+  - nodeId: gv_end
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Po zmianie, przy tylnym wyj\u015Bciu. Od marca w Irlandii nie wolno pali\u0107 w pubach ani w restauracjach, wi\u0119c ca\u0142a kuchnia pali na zapleczu, przy kontenerach. Zza drzwi s\u0142ycha\u0107 Declana."
+    - speakerId: declan
+      language: 1
+      text: I washed pots in Boston for three years, Gavin. Nobody called it charity. They called it work.
+    - speakerId: narrator
+      language: 0
+      text: "Chwil\u0119 p\xF3\u017Aniej Gavin wychodzi, zapala i bez s\u0142owa podsuwa Kubie paczk\u0119."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Nie pal\u0119. Bior\u0119 jednego. Czasem rozejm wygl\u0105da jak papieros, kt\xF3rego si\u0119 nie chce."
+    teachVocabularyWords:
+    - washed
+    - pots
+    - years
+    - called
+    - work
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

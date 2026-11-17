@@ -1,0 +1,24 @@
+{
+    "name": "Zmywak.UI",
+    "rootNamespace": "Zmywak.UI",
+    "references": [
+        "Zmywak.Core",
+        "Zmywak.Kitchen",
+        "Zmywak.Meta",
+        "Zmywak.Narrative",
+        "Unity.InputSystem",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.RenderPipelines.Universal.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

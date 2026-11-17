@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71af85db1aa5b2445ae65300039386af, type: 3}
+  m_Name: Dish_bowl
+  m_EditorClassIdentifier: Zmywak.Core::Zmywak.Core.Data.DishDefinition
+  id: bowl
+  displayName: Miska
+  placeholderPrimitive: 2
+  shape: 4
+  placeholderScale: {x: 0.72, y: 0.2, z: 0.72}
+  placeholderCleanColor: {r: 0.93, g: 0.92, b: 0.89, a: 1}
+  smoothness: 0.85
+  metallic: 0
+  cleanOpacity: 0
+  dirtLayers:
+  - dirtType: {fileID: 11400000, guid: d1bd7a4b1c1e4114b827af208c0dfc85, type: 2}
+    coverage: 0.6
+  rackFootprint: {x: 2, y: 2}
+  rackBodyOffset: {x: 0, y: 0}
+  leftoversMesh: {fileID: 4300000, guid: 4bd522b170eba8c48a434c7aad1a53b6, type: 2}
+  leftoversPalette: {fileID: 2800000, guid: a87576f9ca75b0a42b1c02fb0f97d50e, type: 3}
+  material: 0
+  massKg: 0.45

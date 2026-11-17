@@ -1,0 +1,194 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch3_6_Critic
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: cr_1
+  nodes:
+  - nodeId: cr_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Wtorek wiecz\xF3r. Siobh\xE1n wpada do kuchni blada jak talerz."
+    - speakerId: siobhan
+      language: 1
+      text: Table seven. That's your woman from the Irish Times. The food critic. I'd know her anywhere.
+    - speakerId: declan
+      language: 1
+      text: Right. Nobody panics. Nobody. Gavin, the lamb. Kooba...
+    teachVocabularyWords:
+    - seven
+    - critic
+    - anywhere
+    - panics
+    - lamb
+    unlockSlangIds:
+    - slang_your_man
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch3_at_board
+    branchNodeId: cr_board
+    nextNodeId: cr_sink
+  - nodeId: cr_board
+    lines:
+    - speakerId: declan
+      language: 1
+      text: ...brunoise for the soup. Three millimetres. Like Thursday.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Jak w czwartek. Palce zgi\u0119te jak pazury, ostrze prowadzi k\u0142ykie\u0107. Trzy milimetry."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: cr_crash
+  - nodeId: cr_sink
+    lines:
+    - speakerId: declan
+      language: 1
+      text: ...plates. Hot plates, clean plates, all night. You're the engine, Kooba.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Silnik. Pierwszy raz kto\u015B nazwa\u0142 zmywaka silnikiem. Syzyf by si\u0119 u\u015Bmiechn\u0105\u0142."
+    teachVocabularyWords:
+    - engine
+    - hot
+    - night
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: cr_crash
+  - nodeId: cr_crash
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Za dwadzie\u015Bcia dziewi\u0105ta. Gavin chwyta rondel z sosem bez \u015Bcierki i syczy przez z\u0119by. R\u0119ka czerwona, sos na pod\u0142odze, jagni\u0119cina dla stolika siedem za cztery minuty."
+    - speakerId: gavin
+      language: 1
+      text: Banjaxed. My hand's banjaxed.
+    teachVocabularyWords:
+    - hand
+    unlockSlangIds:
+    - slang_banjaxed
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: Rzucam swoje i pomagam Gavinowi.
+      targetNodeId: cr_help
+      requiredFlag: 
+    - choiceText: "Pilnuj\u0119 swojej roboty. Declan jest blisko."
+      targetNodeId: cr_own
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: cr_help
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Zimna woda na r\u0119k\u0119 Gavina, czysty rondel, \u015Bcierka. Kuba podaje, Gavin jedn\u0105 r\u0119k\u0105 ko\u0144czy sos. Trzy minuty pi\u0119\u0107dziesi\u0105t sekund."
+    - speakerId: gavin
+      language: 1
+      text: ...Cheers, Kooba. Don't tell anyone.
+    teachVocabularyWords:
+    - cheers
+    - tell
+    - anyone
+    unlockSlangIds: []
+    setFlags:
+    - ch3_helped_gavin
+    outcome:
+      moneyEuros: 0
+      energy: -5
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: cr_end
+  - nodeId: cr_own
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Declan sam \u0142apie rondel. Klnie po irlandzku, kt\xF3rego Kuba nie zna, ale rozumie ka\u017Cde s\u0142owo. Jagni\u0119cina wychodzi minut\u0119 za p\xF3\u017Ano."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Zrobi\u0142em swoje. Czy to wystarczy? W kuchni chyba nigdy nie wystarcza."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: cr_end
+  - nodeId: cr_end
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Czwartek. Recenzja w \"The Irish Times\": \"a quietly confident kitchen\", cztery gwiazdki na pi\u0119\u0107. Declan przypina wycinek nad wydawk\u0105, obok grafiku."
+    - speakerId: declan
+      language: 1
+      text: Four stars. The whole city's eating out these days, Kooba. Money everywhere. Watch this place grow.
+    - speakerId: gavin
+      language: 1
+      text: Not bad. For a charity.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Gavin si\u0119 u\u015Bmiecha. Nie do mnie, ale te\u017C nie przeciwko mnie. Trzy tygodnie temu nie zna\u0142em tu nikogo. Dzi\u015B znam ludzi, kt\xF3rzy prawie wiedz\u0105, jak mam na imi\u0119."
+    - speakerId: narrator
+      language: 0
+      text: "Koniec Rozdzia\u0142u 3: Swoi i obcy."
+    teachVocabularyWords:
+    - stars
+    - city
+    - eating
+    - money
+    - grow
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

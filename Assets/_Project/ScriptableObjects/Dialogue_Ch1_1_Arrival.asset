@@ -1,0 +1,277 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch1_1_Arrival
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: arrival_1
+  nodes:
+  - nodeId: arrival_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "1 maja 2004. Od dzi\u015B Polska jest w Unii Europejskiej. Lotnisko w Dublinie, hala przylot\xF3w."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Pan z agencji \"Emerald Recruitment\" mia\u0142 czeka\u0107 z kartk\u0105 \"KUBA - BUDOWA\". Czekam drug\u0105 godzin\u0119. Kartki nie ma. Pana te\u017C nie."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Dzwoni\u0119 na numer z ulotki. Po czterech sygna\u0142ach kto\u015B odbiera."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: arrival_2
+  - nodeId: arrival_2
+    lines:
+    - speakerId: agent
+      language: 1
+      text: Emerald Recruitment, Gerry speaking. Ah, the Polish lad! Small problem, the job is gone. But for fifty euro I can get you on a site next week.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Fifty euro. Mam dwadzie\u015Bcia. I bilet w jedn\u0105 stron\u0119."
+    teachVocabularyWords:
+    - job
+    - problem
+    - euro
+    - week
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Oddaj\u0119 ostatnie dwadzie\u015Bcia euro. A nu\u017C."
+      targetNodeId: arrival_pay
+      requiredFlag: 
+    - choiceText: "Roz\u0142\u0105czam si\u0119."
+      targetNodeId: arrival_hang_up
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: arrival_pay
+    lines:
+    - speakerId: agent
+      language: 1
+      text: Twenty? Grand, grand. I'll ring you, so.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Nie zadzwoni. Wiem to, zanim sko\u0144czy m\xF3wi\u0107."
+    teachVocabularyWords: []
+    unlockSlangIds:
+    - slang_so
+    setFlags:
+    - ch1_paid_agency
+    outcome:
+      moneyEuros: -20
+      energy: 0
+      homesickness: 5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: arrival_hostel
+  - nodeId: arrival_hang_up
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Roz\u0142\u0105czam si\u0119. Pi\u0119\u0107 lat filozofii nauczy\u0142o mnie w\u0105tpi\u0107. Pierwszy raz do czego\u015B si\u0119 to przyda\u0142o."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch1_refused_agency
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: arrival_hostel
+  - nodeId: arrival_hostel
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Hostel przy O'Connell Street. \u0141\xF3\u017Cko pi\u0119trowe, osiem os\xF3b w pokoju. Jedna z nich m\xF3wi po polsku."
+    - speakerId: marek
+      language: 0
+      text: "Emerald? Mnie te\u017C wzi\u0119li na Emerald. Budowa, co? S\u0142uchaj, w Temple Bar szukaj\u0105 ch\u0142opaka na zmywak. P\u0142ac\u0105 w pi\u0105tek."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Zmywak. Pi\u0119\u0107 lat filozofii, magisterka o Camusie. No c\xF3\u017C, Syzyf te\u017C pracowa\u0142 fizycznie."
+    - speakerId: marek
+      language: 0
+      text: "Jutro o si\xF3dmej. Pytaj o Declana. I si\u0119 nie sp\xF3\u017Anij, on krzyczy."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: arrival_kitchen
+  - nodeId: arrival_kitchen
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Restauracja w Temple Bar. Kuchnia pachnie sma\u017Conym boczkiem i strachem."
+    - speakerId: declan
+      language: 1
+      text: You're the new fella, yeah? Grand. Name's Declan, I run this kitchen.
+    teachVocabularyWords:
+    - grand
+    - kitchen
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: arrival_grand
+  - nodeId: arrival_grand
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Zrozumia\u0142em mo\u017Ce po\u0142ow\u0119. Ale \"grand\" m\xF3wi chyba co drugie zdanie - musi znaczy\u0107 co\u015B dobrego."
+    teachVocabularyWords: []
+    unlockSlangIds:
+    - slang_grand
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: arrival_sink
+  - nodeId: arrival_sink
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Right, plates first. Everyone starts at the sink. I did too, back in Boston.
+    teachVocabularyWords:
+    - plates
+    - sink
+    - started
+    - boston
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: arrival_questions
+  - nodeId: arrival_questions
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Any questions?
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Kiwam g\u0142ow\u0105."
+      targetNodeId: arrival_nod
+      requiredFlag: 
+    - choiceText: "Pytam, czy mo\u017Ce m\xF3wi\u0107 wolniej."
+      targetNodeId: arrival_slower
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: arrival_nod
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Good man. We all started here, remember that.
+    teachVocabularyWords:
+    - good
+    - man
+    - remember
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: arrival_end
+  - nodeId: arrival_slower
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Ha! Fair play for asking. We all started here, remember that.
+    teachVocabularyWords:
+    - fair
+    - asking
+    - remember
+    unlockSlangIds:
+    - slang_fair_play
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: arrival_end
+  - nodeId: arrival_end
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "\"Ka\u017Cdy kiedy\u015B od tego zaczyna\u0142.\" Mo\u017Ce i tak. Na razie liczy si\u0119 tylko G\xF3ra brudnych naczy\u0144."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

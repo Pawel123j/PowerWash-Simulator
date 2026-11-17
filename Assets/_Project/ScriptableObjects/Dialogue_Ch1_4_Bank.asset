@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch1_4_Bank
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: bank_1
+  nodes:
+  - nodeId: bank_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Bank przy College Green. Marmury, cisza i pan w krawacie, kt\xF3ry u\u015Bmiecha si\u0119 jak kto\u015B, kto zaraz odm\xF3wi."
+    - speakerId: banker
+      language: 1
+      text: An account? Certainly. I just need your PPS number and a proof of address.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Na PPS potrzebuj\u0119 adresu. Adres, czyli wyci\u0105g, daje konto. Na konto potrzebuj\u0119 PPS."
+    - speakerId: banker
+      language: 1
+      text: Without them, I'm afraid there is nothing I can do.
+    - speakerId: kuba_thought
+      language: 0
+      text: "P\u0119tla. Domkni\u0119ta tak porz\u0105dnie, \u017Ce Kafka by si\u0119 wzruszy\u0142."
+    teachVocabularyWords:
+    - account
+    - certainly
+    - need
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Prosz\u0119 o rozmow\u0119 z kierownikiem."
+      targetNodeId: bank_manager
+      requiredFlag: 
+    - choiceText: "Wychodz\u0119, zanim powiem co\u015B g\u0142upiego."
+      targetNodeId: bank_leave
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: bank_manager
+    lines:
+    - speakerId: banker
+      language: 1
+      text: The manager will tell you the same, sir. Rules are rules.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Kierownik powiedzia\u0142by to samo, tylko d\u0142u\u017Cej."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: bank_sisyphus
+  - nodeId: bank_leave
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Wychodz\u0119. Na schodach go\u0142\u0105b patrzy na mnie jak na kogo\u015B bez numeru PPS."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: bank_sisyphus
+  - nodeId: bank_sisyphus
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Syzyf przynajmniej wiedzia\u0142, gdzie jest jego g\xF3ra. Camus kaza\u0142 wyobra\u017Ca\u0107 go sobie szcz\u0119\u015Bliwym. Spr\xF3bujmy: jestem szcz\u0119\u015Bliwy. Nie dzia\u0142a."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Ale Camus pisa\u0142 te\u017C, \u017Ce samo wspinanie si\u0119 wystarczy. Declan wspina\u0142 si\u0119 w Bostonie. Ciekawe, kto mu wtedy pom\xF3g\u0142."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch1_sisyphus
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: bank_end
+  - nodeId: bank_end
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Wieczorem do pracy. Talerze przynajmniej nie wymagaj\u0105 za\u015Bwiadcze\u0144."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch2_2_Siobhan
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: sio_1
+  nodes:
+  - nodeId: sio_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Sobota, wiecz\xF3r, pe\u0142na sala. Przez okienko podawcze co chwil\u0119 wpada g\u0142owa w rudych lokach i wo\u0142a zam\xF3wienia szybciej, ni\u017C Kuba je rozumie."
+    - speakerId: siobhan
+      language: 1
+      text: Two plates for table four, and where's the jacks key? Some eejit locked it again!
+    - speakerId: kuba_thought
+      language: 0
+      text: "\"Jacks\". Nie mam poj\u0119cia, co to jest. Ale mina m\xF3wi, \u017Ce co\u015B pilnego."
+    teachVocabularyWords:
+    - table
+    - key
+    - locked
+    - again
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Podaj\u0119 jej klucz z haczyka nad zlewem."
+      targetNodeId: sio_key
+      requiredFlag: 
+    - choiceText: Pytam, co to jest "jacks".
+      targetNodeId: sio_ask
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: sio_key
+    lines:
+    - speakerId: siobhan
+      language: 1
+      text: Ah, you're a star! The jacks is the toilet, by the way. You'll learn.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Strza\u0142 w ciemno. Trafiony. Filozofia nazywa to intuicj\u0105, ja nazywam to haczykiem z napisem WC."
+    teachVocabularyWords:
+    - star
+    - toilet
+    - learn
+    unlockSlangIds:
+    - slang_jacks
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: sio_invite
+  - nodeId: sio_ask
+    lines:
+    - speakerId: siobhan
+      language: 1
+      text: The jacks? The toilet, pet! And an eejit is... well, whoever locked it. Not you, I hope.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Dwa s\u0142owa w jednym zdaniu. Agnieszka b\u0119dzie zazdrosna, \u017Ce ucz\u0119 si\u0119 szybciej w kuchni ni\u017C ona na kursie."
+    teachVocabularyWords:
+    - toilet
+    - hope
+    unlockSlangIds:
+    - slang_jacks
+    - slang_eejit
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: sio_invite
+  - nodeId: sio_invite
+    lines:
+    - speakerId: siobhan
+      language: 1
+      text: Mondays are dead, so after close on Monday we're all going to Mulligan's. The whole kitchen. You coming?
+    - speakerId: kuba_thought
+      language: 0
+      text: "W poniedzia\u0142ek po zamkni\u0119ciu do pubu. Ca\u0142a kuchnia. W kopercie zosta\u0142o, ile zosta\u0142o."
+    teachVocabularyWords:
+    - dead
+    - going
+    - close
+    - whole
+    - coming
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Id\u0119. Raz si\u0119 \u017Cyje."
+      targetNodeId: sio_yes
+      requiredFlag: 
+    - choiceText: "Wymiguj\u0119 si\u0119. Musz\u0119 si\u0119 wyspa\u0107."
+      targetNodeId: sio_no
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: sio_yes
+    lines:
+    - speakerId: siobhan
+      language: 1
+      text: Deadly! Bring your wallet, it's your round after mine.
+    teachVocabularyWords:
+    - wallet
+    - round
+    unlockSlangIds:
+    - slang_deadly
+    setFlags:
+    - ch2_pub_yes
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: sio_end
+  - nodeId: sio_no
+    lines:
+    - speakerId: siobhan
+      language: 1
+      text: Ah, you're no craic at all. Next time, so.
+    teachVocabularyWords:
+    - time
+    unlockSlangIds: []
+    setFlags:
+    - ch2_pub_no
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: sio_end
+  - nodeId: sio_end
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "W szkole uczyli mnie \"How do you do\". Nikt tu tak nie m\xF3wi. Tu m\xF3wi si\u0119 \"what's the craic\" i \"you're a star\". Podr\u0119czniki k\u0142ama\u0142y."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

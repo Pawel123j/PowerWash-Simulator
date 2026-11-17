@@ -1,0 +1,209 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch3_2_Tomek
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: tomek3_1
+  nodes:
+  - nodeId: tomek3_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Pi\u0105tek. Druga wyp\u0142ata."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch2_tomek_at_sink
+    branchNodeId: tomek3_sink
+    nextNodeId: tomek3_route
+  - nodeId: tomek3_route
+    lines: []
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch2_lent_tomek
+    branchNodeId: tomek3_repay
+    nextNodeId: tomek3_gone
+  - nodeId: tomek3_sink
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Trzeci dzie\u0144 Tomka przy zlewie. Cztery st\u0142uczone talerze, patelnia w koszu na szklanki i woda na ca\u0142ej pod\u0142odze."
+    - speakerId: gavin
+      language: 1
+      text: Your man there is a bull in a china shop. Literally. In a china shop.
+    - speakerId: tomek
+      language: 0
+      text: "Kuba, te kosze... Na budowie wszystko jest prostok\u0105tne. Tu nic do niczego nie pasuje."
+    teachVocabularyWords:
+    - bull
+    - shop
+    - literally
+    unlockSlangIds:
+    - slang_your_man
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Zostaj\u0119 po zmianie i ucz\u0119 Tomka uk\u0142ada\u0107 kosz."
+      targetNodeId: tomek3_teach
+      requiredFlag: 
+    - choiceText: "M\xF3wi\u0119 mu, \u017Ce musi sam. Ja te\u017C musia\u0142em."
+      targetNodeId: tomek3_alone
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: tomek3_teach
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Do jedenastej w nocy: talerze bokiem, patelnie r\u0105czk\u0105 do ty\u0142u, szklanki dnem do g\xF3ry. Tomek uk\u0142ada kosz jak tynk: powoli, ale potem nic nie odpada."
+    - speakerId: tomek
+      language: 0
+      text: "Wiesz co? Jak to u\u0142o\u017Cy\u0107 na p\u0142asko, to jest jak glazura. Kafelek przy kafelku."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch3_taught_tomek
+    outcome:
+      moneyEuros: 0
+      energy: -10
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: tomek3_end
+  - nodeId: tomek3_alone
+    lines:
+    - speakerId: tomek
+      language: 0
+      text: "No tak. Ka\u017Cdy sam."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Powiedzia\u0142em mu to, co kiedy\u015B kto\u015B powiedzia\u0142 mnie. Nie wiem, czy to m\u0105dro\u015B\u0107, czy tylko \u0142a\u0144cuch."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: tomek3_end
+  - nodeId: tomek3_repay
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Wieczorem Tomek puka do pokoju. W r\u0119ce trzy banknoty po dziesi\u0119\u0107 euro i butelka \u017Bubr\xF3wki."
+    - speakerId: tomek
+      language: 0
+      text: "M\xF3wi\u0142em: w pi\u0105tek. Marek za\u0142atwi\u0142 mi fuch\u0119 na Ballymun. P\u0142ac\u0105 pod sto\u0142em, ale p\u0142ac\u0105. A to na procent."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Trzydzie\u015Bci euro wr\xF3ci\u0142o. Procent stoi na parapecie. W domu na dziewi\u0119\u0107 os\xF3b starczy na jeden wiecz\xF3r."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch3_tomek_repaid
+    outcome:
+      moneyEuros: 30
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: tomek3_end
+  - nodeId: tomek3_gone
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Materac Tomka jest pusty. Le\u017Cy na nim kartka."
+    - speakerId: tomek
+      language: 0
+      text: "Przenios\u0142em si\u0119 do kumpla na Ballymun. Taniej. Nie gniewam si\u0119. Trzymaj si\u0119. T."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Nie gniewa si\u0119. To gorzej, ni\u017C gdyby si\u0119 gniewa\u0142."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Wysy\u0142am mu SMS-a: \"Sorry, stary. Piwo na mnie.\""
+      targetNodeId: tomek3_text
+      requiredFlag: 
+    - choiceText: "Odk\u0142adam kartk\u0119 i id\u0119 spa\u0107."
+      targetNodeId: tomek3_end
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: tomek3_text
+    lines:
+    - speakerId: tomek
+      language: 0
+      text: "Spoko. Trzymam za s\u0142owo."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch3_texted_tomek
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: tomek3_end
+  - nodeId: tomek3_end
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Dublin jest ma\u0142y. Wszyscy w ko\u0144cu spotykaj\u0105 si\u0119 przy tym samym zlewie, na tej samej budowie albo w tej samej kolejce na poczcie."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

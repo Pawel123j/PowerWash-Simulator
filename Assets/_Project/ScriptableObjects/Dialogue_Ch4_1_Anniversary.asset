@@ -1,0 +1,245 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch4_1_Anniversary
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: fluent
+  nodes:
+  - nodeId: fluent
+    lines: []
+    teachVocabularyWords:
+    - two
+    - years
+    - kooba
+    - started
+    - at
+    - my
+    - sink
+    - now
+    - you
+    - run
+    - starters
+    - don't
+    - let
+    - it
+    - go
+    - to
+    - your
+    - head
+    - best
+    - in
+    - dublin
+    - and
+    - i've
+    - seen
+    - a
+    - few
+    - still
+    - want
+    - the
+    - board
+    - another
+    - one
+    - you'll
+    - have
+    - whole
+    - of
+    - poland
+    - kitchen
+    - fine
+    - monday
+    - seven
+    - he's
+    - responsibility
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: an_1
+  - nodeId: an_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "1 maja 2006. Dwa lata temu, co do dnia, Kuba wyl\u0105dowa\u0142 w Dublinie z dwudziestoma euro i biletem w jedn\u0105 stron\u0119. Polska jest w Unii od dw\xF3ch lat. Irlandia jest w czym\u015B, co gazety nazywaj\u0105 Celtyckim Tygrysem."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Nad miastem wi\u0119cej d\u017Awig\xF3w ni\u017C ko\u015Bcio\u0142\xF3w. W kuchni wi\u0119cej polskiego ni\u017C angielskiego. Dwa lata temu nie wiedzia\u0142em, co to \"grand\". Dzi\u015B m\xF3wi\u0119 tak przez sen."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: ch3_at_board
+    branchNodeId: an_board
+    nextNodeId: an_sink
+  - nodeId: an_board
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Kuba prowadzi dzi\u015B przystawki i zupy: w\u0142asna stacja, dw\xF3ch ludzi pod sob\u0105, n\xF3\u017C, kt\xF3rego nikt inny nie dotyka."
+    - speakerId: declan
+      language: 1
+      text: Two years, Kooba. Started at my sink, now you run my starters. Don't let it go to your head.
+    teachVocabularyWords:
+    - starters
+    - head
+    - run
+    - started
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: an_bartek
+  - nodeId: an_sink
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Kuba jest dzi\u015B g\u0142\xF3wnym zmywakiem: trzech ludzi przy zlewie, grafik na drzwiach, zam\xF3wienia chemii. M\xF3wi\u0105 na niego \"szef zlewu\" i nie zawsze \u017Cartem."
+    - speakerId: declan
+      language: 1
+      text: Two years, Kooba. Best sink in Dublin, and I've seen a few. Still don't want the board?
+    - speakerId: kuba_thought
+      language: 0
+      text: "Nie chc\u0119. Albo jeszcze nie chc\u0119. Przy zlewie wiem, kim jestem."
+    teachVocabularyWords:
+    - best
+    - seen
+    - still
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: an_bartek
+  - nodeId: an_bartek
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "W drzwiach zaplecza stoi ch\u0142opak w za du\u017Cej kurtce, z reklam\xF3wk\u0105. Bia\u0142y jak talerz."
+    - speakerId: bartek
+      language: 0
+      text: "Dzie\u0144 dobry... Pan Kuba? Marek m\xF3wi\u0142, \u017Ce pan tu pracuje. Agencja w Bia\u0142ymstoku wzi\u0119\u0142a ode mnie trzysta z\u0142otych. Pracy nie ma, adresu nie ma, nic nie ma."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Lotnisko, pierwszy maja, dwadzie\u015Bcia euro. Jakbym patrzy\u0142 w lustro sprzed dw\xF3ch lat."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Bior\u0119 Bartka pod skrzyd\u0142a. Najpierw zlew, potem zobaczymy."
+      targetNodeId: an_mentor
+      requiredFlag: 
+    - choiceText: "Daj\u0119 mu numer do Marka i adres polskiego sklepu z og\u0142oszeniami."
+      targetNodeId: an_address
+      requiredFlag: 
+    - choiceText: "Prosz\u0119 Declana, \u017Ceby da\u0142 mu szans\u0119, jak kiedy\u015B mnie."
+      targetNodeId: an_letter
+      requiredFlag: ch1_declan_letter
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: an_mentor
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Kuba pokazuje Bartkowi wszystko, czego sam uczy\u0142 si\u0119 dwa lata: jak zeskroba\u0107, jak sp\u0142uka\u0107, jak u\u0142o\u017Cy\u0107 kosz, gdzie le\u017C\u0105 niebieskie plastry."
+    - speakerId: bartek
+      language: 0
+      text: "A ten szef, ten du\u017Cy... On krzyczy, bo jest z\u0142y?"
+    - speakerId: kuba_thought
+      language: 0
+      text: "Krzyczy, bo jest Declanem. Tego te\u017C si\u0119 nauczysz."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch4_mentor_bartek
+    outcome:
+      moneyEuros: 0
+      energy: -5
+      homesickness: -5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: an_address
+    lines:
+    - speakerId: bartek
+      language: 0
+      text: "Dzi\u0119kuj\u0119. Naprawd\u0119."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Da\u0142em mu to, co sam dosta\u0142em na pocz\u0105tku od Marka: adres i numer. Du\u017Co czy ma\u0142o? Mnie wtedy wystarczy\u0142o."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch4_sent_bartek_on
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: an_letter
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Another one? Kooba, you'll have the whole of Poland in my kitchen. ...Fine. Monday, seven. He's your responsibility.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Ka\u017Cdy kiedy\u015B od tego zaczyna\u0142. Dwa lata temu kto\u015B napisa\u0142 list za mnie. Dzi\u015B ja go pisz\u0119."
+    teachVocabularyWords:
+    - another
+    - whole
+    - responsibility
+    unlockSlangIds: []
+    setFlags:
+    - ch4_mentor_bartek
+    - ch4_vouched_bartek
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 

@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f67b7b841dde4a89478ad5ef11627, type: 3}
+  m_Name: Dialogue_Ch2_5_Tomek
+  m_EditorClassIdentifier: Zmywak.Narrative::Zmywak.Narrative.Dialogue.DialogueGraph
+  startNodeId: tomek_1
+  nodes:
+  - nodeId: tomek_1
+    lines:
+    - speakerId: narrator
+      language: 0
+      text: "Wtorek rano. Tomek siedzi na schodach przed domem z kaskiem na kolanach. Nie poszed\u0142 na budow\u0119. Budowa posz\u0142a bez niego."
+    - speakerId: tomek
+      language: 0
+      text: "Zwolnili p\xF3\u0142 ekipy. Bez s\u0142owa, po prostu nie ma nazwiska na li\u015Bcie. Czynsz w pi\u0105tek, a ja mam dwadzie\u015Bcia euro i kask."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Znam t\u0119 min\u0119. Widzia\u0142em j\u0105 w lustrze na lotnisku pierwszego maja."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices:
+    - choiceText: "Po\u017Cyczam mu trzydzie\u015Bci euro."
+      targetNodeId: tomek_lend
+      requiredFlag: 
+    - choiceText: "Pytam Declana, czy nie potrzebuje kogo\u015B na zmywak."
+      targetNodeId: tomek_declan
+      requiredFlag: ch1_declan_letter
+    - choiceText: "M\xF3wi\u0119, \u017Ce sam ledwo wi\u0105\u017C\u0119 koniec z ko\u0144cem."
+      targetNodeId: tomek_no
+      requiredFlag: 
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
+  - nodeId: tomek_lend
+    lines:
+    - speakerId: tomek
+      language: 0
+      text: "Oddam w przysz\u0142y pi\u0105tek. S\u0142owo. A jak nie oddam, to mo\u017Cesz spa\u0107 na moim p\xF3\u0142 materaca do ko\u0144ca roku."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Trzydzie\u015Bci euro mniej. Ale w domu na dziewi\u0119\u0107 os\xF3b d\u0142ug wdzi\u0119czno\u015Bci to waluta twardsza ni\u017C euro."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags:
+    - ch2_lent_tomek
+    outcome:
+      moneyEuros: -30
+      energy: 0
+      homesickness: 0
+      integration: 5
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: tomek_end
+  - nodeId: tomek_declan
+    lines:
+    - speakerId: declan
+      language: 1
+      text: Another Polish lad? If he works like you, send him in. Tomorrow, seven. And tell him I shout.
+    - speakerId: kuba_thought
+      language: 0
+      text: "Ka\u017Cdy kiedy\u015B od tego zaczyna\u0142. Teraz ja pisz\u0119 \"list\". Ten sam, kt\xF3ry Declan dosta\u0142 w Bostonie. Tak to dzia\u0142a."
+    - speakerId: tomek
+      language: 0
+      text: "Zmywak? Ja, majster od tynk\xF3w? ...A wiesz co, bior\u0119. Lepsza mokra robota ni\u017C \u017Cadna."
+    teachVocabularyWords:
+    - another
+    - send
+    - tomorrow
+    - shout
+    unlockSlangIds: []
+    setFlags:
+    - ch2_tomek_at_sink
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: -5
+      integration: 10
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: tomek_end
+  - nodeId: tomek_no
+    lines:
+    - speakerId: tomek
+      language: 0
+      text: "Jasne. Rozumiem. Ka\u017Cdy ma swoje."
+    - speakerId: kuba_thought
+      language: 0
+      text: "Rozumie. I w\u0142a\u015Bnie dlatego jest mi g\u0142upio przez ca\u0142y dzie\u0144."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 5
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: tomek_end
+  - nodeId: tomek_end
+    lines:
+    - speakerId: kuba_thought
+      language: 0
+      text: "Dublin to miasto, w kt\xF3rym po\u0142owa ludzi kogo\u015B zna, a druga po\u0142owa kogo\u015B szuka. Ja ju\u017C jestem w tej pierwszej po\u0142owie. Ledwo."
+    teachVocabularyWords: []
+    unlockSlangIds: []
+    setFlags: []
+    outcome:
+      moneyEuros: 0
+      energy: 0
+      homesickness: 0
+      integration: 0
+    choices: []
+    branchIfFlag: 
+    branchNodeId: 
+    nextNodeId: 
