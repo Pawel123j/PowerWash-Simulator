@@ -1,0 +1,135 @@
+# Reconstructed on 2026-11-17: the original file was lost from disk. Rebuilt from README section 8.5
+# (GitHub Actions + GameCI) and Tools/build_android.ps1; not yet run in the cloud.
+# Tests (EditMode gates the APK, PlayMode only reports) -> development APK (IL2CPP, ARM64, the same
+# AndroidBuildScript as locally) -> 16 KB page checks and target API >= 36 -> APK artifact for 14 days.
+name: Android
+
+on:
+  push:
+    branches: [main, master]
+    paths-ignore:
+      - '**.md'
+      - 'Tools/**'
+      - 'Logs/**'
+  workflow_dispatch:
+
+concurrency:
+  group: android-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+  UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+  UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+
+jobs:
+  editmode:
+    name: EditMode tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-test-${{ hashFiles('Packages/packages-lock.json', 'ProjectSettings/ProjectVersion.txt') }}
+          restore-keys: Library-test-
+      - uses: game-ci/unity-test-runner@v4
+        with:
+          testMode: editmode
+          artifactsPath: test-results-editmode
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          checkName: EditMode results
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: EditMode-results
+          path: test-results-editmode
+
+  playmode:
+    # Reports only: software rendering on a GPU-less runner is not proven yet. Once it is stable, add
+    # `playmode` to the `needs` of the `android` job.
+    name: PlayMode tests
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-test-${{ hashFiles('Packages/packages-lock.json', 'ProjectSettings/ProjectVersion.txt') }}
+          restore-keys: Library-test-
+      - uses: game-ci/unity-test-runner@v4
+        with:
+          testMode: playmode
+          artifactsPath: test-results-playmode
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          checkName: PlayMode results
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: PlayMode-results
+          path: test-results-playmode
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: PlayMode-screenshots
+          path: |
+            **/Screenshots/**
+            **/*Screenshot*.png
+          if-no-files-found: ignore
+
+  android:
+    name: Development APK
+    needs: editmode
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - name: Free disk space for the IL2CPP build
+        run: |
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/share/boost "$AGENT_TOOLSDIRECTORY" || true
+          df -h /
+      - uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-Android-${{ hashFiles('Packages/packages-lock.json', 'ProjectSettings/ProjectVersion.txt') }}
+          restore-keys: Library-Android-
+      - uses: game-ci/unity-builder@v4
+        with:
+          targetPlatform: Android
+          buildMethod: Zmywak.EditorTools.AndroidBuildScript.BuildAndroid
+          androidExportType: androidPackage
+      - name: Find the APK
+        id: apk
+        run: |
+          apk="Builds/Android/Zmywak-dev.apk"
+          if [ ! -f "$apk" ]; then apk=$(find . -name 'Zmywak-dev.apk' -not -path './Library/*' | head -n 1); fi
+          test -n "$apk" && test -f "$apk" || { echo "::error::No Zmywak-dev.apk after the build"; exit 1; }
+          echo "path=$apk" >> "$GITHUB_OUTPUT"
+      - name: 16 KB pages and target API >= 36
+        run: |
+          apk="${{ steps.apk.outputs.path }}"
+          bt=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -n 1)
+          echo "build-tools: $bt"
+          "$bt/zipalign" -c -P 16 -v 4 "$apk" > zipalign.txt || { tail -n 20 zipalign.txt; echo "::error::APK is not 16 KB zip-aligned"; exit 1; }
+          mkdir -p so && unzip -q -o "$apk" 'lib/*.so' -d so
+          bad=0
+          for so in $(find so -name '*.so'); do
+            for a in $(readelf -lW "$so" | awk '$1=="LOAD"{print $NF}'); do
+              if [ $((a)) -lt $((0x4000)) ]; then echo "::error::$so has a LOAD segment aligned to $a (< 16 KB)"; bad=1; fi
+            done
+          done
+          [ $bad -eq 0 ] || exit 1
+          target=$("$bt/aapt2" dump badging "$apk" | sed -n "s/.*targetSdkVersion:'\([0-9]*\)'.*/\1/p")
+          echo "targetSdkVersion: $target"
+          [ -n "$target" ] && [ "$target" -ge 36 ] || { echo "::error::targetSdkVersion $target < 36"; exit 1; }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Zmywak-dev-apk
+          path: ${{ steps.apk.outputs.path }}
+          retention-days: 14
