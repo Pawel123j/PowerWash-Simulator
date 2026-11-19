@@ -17,31 +17,39 @@ concurrency:
   group: android-${{ github.ref }}
   cancel-in-progress: true
 
-env:
-  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-  UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-  UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+# PW-01/PW-02: brak sekretów na poziomie workflow. Poświadczenia Unity trafiają wyłącznie do
+# kroków GameCI (przypiętych do SHA), a token GITHUB_TOKEN ma minimalne uprawnienia.
+permissions:
+  contents: read
 
 jobs:
   editmode:
     name: EditMode tests
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      checks: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           lfs: true
-      - uses: actions/cache@v4
+          persist-credentials: false
+      - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: Library
           key: Library-test-${{ hashFiles('Packages/packages-lock.json', 'ProjectSettings/ProjectVersion.txt') }}
           restore-keys: Library-test-
-      - uses: game-ci/unity-test-runner@v4
+      - uses: game-ci/unity-test-runner@32e57712352b500e17974b245a6dce9e11a73213 # v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           testMode: editmode
           artifactsPath: test-results-editmode
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           checkName: EditMode results
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:
           name: EditMode-results
@@ -52,28 +60,36 @@ jobs:
     # `playmode` to the `needs` of the `android` job.
     name: PlayMode tests
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      checks: write
     continue-on-error: true
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           lfs: true
-      - uses: actions/cache@v4
+          persist-credentials: false
+      - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: Library
           key: Library-test-${{ hashFiles('Packages/packages-lock.json', 'ProjectSettings/ProjectVersion.txt') }}
           restore-keys: Library-test-
-      - uses: game-ci/unity-test-runner@v4
+      - uses: game-ci/unity-test-runner@32e57712352b500e17974b245a6dce9e11a73213 # v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           testMode: playmode
           artifactsPath: test-results-playmode
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           checkName: PlayMode results
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:
           name: PlayMode-results
           path: test-results-playmode
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:
           name: PlayMode-screenshots
@@ -87,19 +103,24 @@ jobs:
     needs: editmode
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           lfs: true
+          persist-credentials: false
       - name: Free disk space for the IL2CPP build
         run: |
           sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/share/boost "$AGENT_TOOLSDIRECTORY" || true
           df -h /
-      - uses: actions/cache@v4
+      - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: Library
           key: Library-Android-${{ hashFiles('Packages/packages-lock.json', 'ProjectSettings/ProjectVersion.txt') }}
           restore-keys: Library-Android-
-      - uses: game-ci/unity-builder@v4
+      - uses: game-ci/unity-builder@4423ee75828dff56037d1d1cfdac6b68e3a6ba00 # v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: Android
           buildMethod: Zmywak.EditorTools.AndroidBuildScript.BuildAndroid
@@ -112,8 +133,10 @@ jobs:
           test -n "$apk" && test -f "$apk" || { echo "::error::No Zmywak-dev.apk after the build"; exit 1; }
           echo "path=$apk" >> "$GITHUB_OUTPUT"
       - name: 16 KB pages and target API >= 36
+        env:
+          APK_PATH: ${{ steps.apk.outputs.path }}
         run: |
-          apk="${{ steps.apk.outputs.path }}"
+          apk="$APK_PATH"
           bt=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -n 1)
           echo "build-tools: $bt"
           "$bt/zipalign" -c -P 16 -v 4 "$apk" > zipalign.txt || { tail -n 20 zipalign.txt; echo "::error::APK is not 16 KB zip-aligned"; exit 1; }
@@ -128,7 +151,7 @@ jobs:
           target=$("$bt/aapt2" dump badging "$apk" | sed -n "s/.*targetSdkVersion:'\([0-9]*\)'.*/\1/p")
           echo "targetSdkVersion: $target"
           [ -n "$target" ] && [ "$target" -ge 36 ] || { echo "::error::targetSdkVersion $target < 36"; exit 1; }
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: Zmywak-dev-apk
           path: ${{ steps.apk.outputs.path }}
