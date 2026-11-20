@@ -1,7 +1,7 @@
 # Reconstructed on 2026-11-17: the original file was lost from disk. Rebuilt from README section 8.5
 # (GitHub Actions + GameCI) and Tools/build_android.ps1; not yet run in the cloud.
 # Tests (EditMode gates the APK, PlayMode only reports) -> development APK (IL2CPP, ARM64, the same
-# AndroidBuildScript as locally) -> 16 KB page checks and target API >= 36 -> APK artifact for 14 days.
+# AndroidBuildScript as locally) -> 16 KB page checks and target API >= 36 -> APK artifact for 7 days.
 name: Android
 
 on:
@@ -26,6 +26,7 @@ jobs:
   editmode:
     name: EditMode tests
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     permissions:
       contents: read
       checks: write
@@ -54,12 +55,14 @@ jobs:
         with:
           name: EditMode-results
           path: test-results-editmode
+          retention-days: 7
 
   playmode:
     # Reports only: software rendering on a GPU-less runner is not proven yet. Once it is stable, add
     # `playmode` to the `needs` of the `android` job.
     name: PlayMode tests
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     permissions:
       contents: read
       checks: write
@@ -89,6 +92,7 @@ jobs:
         with:
           name: PlayMode-results
           path: test-results-playmode
+          retention-days: 7
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:
@@ -96,12 +100,14 @@ jobs:
           path: |
             **/Screenshots/**
             **/*Screenshot*.png
+          retention-days: 7
           if-no-files-found: ignore
 
   android:
     name: Development APK
     needs: editmode
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -155,4 +161,4 @@ jobs:
         with:
           name: Zmywak-dev-apk
           path: ${{ steps.apk.outputs.path }}
-          retention-days: 14
+          retention-days: 7
